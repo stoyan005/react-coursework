@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<header className="header">
 			<a href="" className="logo">
-				Logo
+				EliteEstates
 			</a>
 
 			<nav className="navbar">
