@@ -1,26 +1,38 @@
 header {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	padding: 20px 10%;
-	background-color: rgba(60, 59, 61, 0.6);
-	border-bottom: 3px solid #6e4de6;
-	z-index: 100;
+	padding: 30px 100px;
 }
 
 .logo {
 	font-size: 2rem;
 	font-weight: 700;
 	color: #ffffff;
+	text-decoration: none;
+}
+
+.navbar {
+	display: flex;
+	position: absolute;
+	left: 50%;
+	gap: 5rem;
+	padding: 20px 40px;
+	border-radius: 30px;
+	background: rgba(255, 255, 255, 1);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+	transform: translateX(-50%);
 }
 
 .navbar a {
 	position: relative;
 	font-size: 1.25rem;
-	color: #ffffff;
+	color: #000000;
 	font-weight: 600;
-	margin-left: 50px;
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 .navbar a::before {
@@ -29,8 +41,8 @@ header {
 	top: 100%;
 	left: 0;
 	width: 0;
-	height: 2px;
-	background: #ffffff;
+	height: 3px;
+	background: #000000;
 	transition: 0.3s ease;
 }
 
