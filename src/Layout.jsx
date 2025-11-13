@@ -1,13 +1,14 @@
 import Navbar from './Components/Navbar/Navbar';
 
-const App = () => {
+const Layout = ({ children }) => {
 	return (
 		<>
 			<div>
 				<Navbar />
+				{children}
 			</div>
 		</>
 	);
 };
 
-export default App;
+export default Layout;
