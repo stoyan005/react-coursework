@@ -9,7 +9,7 @@ import AboutPage from './About';
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <div>Hello World</div>,
+		element: <div>Hello World</div>
 	},
 	{
 		path: "/about",
