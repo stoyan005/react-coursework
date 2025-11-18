@@ -9,9 +9,6 @@
 }
 
 body {
-	background: url(./assets/photos/skyline.jpg) no-repeat;
-	background-size: cover;
-	background-position: center;
 	min-height: 100vh;
 }
 

@@ -10,6 +10,7 @@ import Agents from './Agents';
 import Buy from './Buy';
 import Contacts from './Contacts';
 import Rent from './Rent';
+import RegisterPage from './Register';
 
 const router = createBrowserRouter([
 	{
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 			{
 				path: 'contacts',
 				element: <Contacts />,
+			},
+			{
+				path: 'register',
+				element: <RegisterPage />,
 			},
 		],
 	},
