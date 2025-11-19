@@ -2,13 +2,14 @@ import React from 'react';
 import './Navbar.css';
 import RegisterBtn from './RegisterBtn.jsx';
 import { Link } from 'react-router-dom';
+import elite_logo from '../../assets/photos/elite_logo.png';
 
 const Navbar = () => {
 	return (
 		<header className="header">
-			<div className="navbar-outer">
+			<div className="navbar_outer">
 				<Link to="/" className="logo">
-					EliteEstates
+					<img className="logo_img" src={elite_logo} alt="Elite Logo" />
 				</Link>
 
 				<nav className="navbar">

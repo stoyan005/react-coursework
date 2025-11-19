@@ -2,17 +2,18 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	padding: 30px 0;
+	padding: 20px 0;
 	width: 100%;
 }
 
-.navbar-outer {
+.navbar_outer {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
+	height: 80px;
 	gap: 10rem;
 	background: #ffffff;
-	padding: 10px 30px;
+	padding: 0px 20px;
 	border-radius: 50px;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -24,6 +25,13 @@
 	text-decoration: none;
 }
 
+.logo_img {
+	height: 220px;
+	width: auto;
+	object-fit: contain;
+	vertical-align: middle;
+}
+
 .navbar {
 	display: flex;
 	gap: 5rem;
@@ -31,7 +39,7 @@
 
 .navbar a {
 	position: relative;
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	color: #000000;
 	font-weight: 600;
 	text-decoration: none;
