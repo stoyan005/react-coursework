@@ -11,10 +11,10 @@
 	align-items: center;
 	justify-content: space-around;
 	height: 80px;
-	gap: 10rem;
+	gap: 5rem;
 	background: #ffffff;
 	padding: 0px 20px;
-	border-radius: 50px;
+	border-radius: 30px;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -34,7 +34,7 @@
 
 .navbar {
 	display: flex;
-	gap: 5rem;
+	gap: 4rem;
 }
 
 .navbar a {
