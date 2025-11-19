@@ -11,6 +11,7 @@ import Buy from './pages/Buy';
 import Contacts from './pages/Contacts';
 import Rent from './pages/Rent';
 import RegisterPage from './pages/Register';
+import LoginPage from './pages/Login';
 
 const router = createBrowserRouter([
 	{
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 			{
 				path: 'register',
 				element: <RegisterPage />,
+			},
+			{
+				path: 'login',
+				element: <LoginPage />,
 			},
 		],
 	},
