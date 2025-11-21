@@ -47,19 +47,23 @@ const LoginForm = () => {
 
 	return (
 		<div className="login_container">
-			<form onSubmit={handleSubmit} className="login_form">
+			<form className="login_form" onSubmit={handleSubmit}>
 				<div className="login_header">
 					<img src={elite_logo} alt="Elite estates logo" className="login_logo" />
 				</div>
-				<h2>Login to an existing account!</h2>
+				<h2>Login to an Existing Account!</h2>
 
-				<label>Username:</label>
-				<input type="text" name="username" value={formData.username} onChange={handleChange} />
-				{errors.username && <p className="error">{errors.username}</p>}
+				<div className="input_group">
+					<input type="text" name="username" value={formData.username} onChange={handleChange} placeholder=" " />
+					<label>Username:</label>
+					{errors.username && <p className="error">{errors.username}</p>}
+				</div>
 
-				<label>Password:</label>
-				<input type="password" name="password" value={formData.password} onChange={handleChange} />
-				{errors.password && <p className="error">{errors.password}</p>}
+				<div className="input_group">
+					<input type="password" name="password" value={formData.password} onChange={handleChange} placeholder=" " />
+					<label>Password:</label>
+					{errors.password && <p className="error">{errors.password}</p>}
+				</div>
 
 				<button type="submit">Login!</button>
 

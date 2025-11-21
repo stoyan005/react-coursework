@@ -56,17 +56,23 @@ const RegisterForm = () => {
 				</div>
 				<h2>Create an Account!</h2>
 
-				<label>Username:</label>
-				<input type="text" name="username" value={formData.username} onChange={handleChange} />
-				{errors.username && <p className="error">{errors.username}</p>}
+				<div className="input_group">
+					<input type="text" name="username" value={formData.username} onChange={handleChange} placeholder=" " />
+					<label>Username:</label>
+					{errors.username && <p className="error">{errors.username}</p>}
+				</div>
 
-				<label>Email:</label>
-				<input type="email" name="email" value={formData.email} onChange={handleChange} />
-				{errors.email && <p className="error">{errors.email}</p>}
+				<div className="input_group">
+					<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder=" " />
+					<label>Email:</label>
+					{errors.email && <p className="error">{errors.email}</p>}
+				</div>
 
-				<label>Password:</label>
-				<input type="password" name="password" value={formData.password} onChange={handleChange} />
-				{errors.password && <p className="error">{errors.password}</p>}
+				<div className="input_group">
+					<input type="password" name="password" value={formData.password} onChange={handleChange} placeholder=" " />
+					<label>Password:</label>
+					{errors.password && <p className="error">{errors.password}</p>}
+				</div>
 
 				<button type="submit">Register!</button>
 
