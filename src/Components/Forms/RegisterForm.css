@@ -22,7 +22,7 @@ body {
 	text-align: center;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #e0e0e0;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
 
 .register_logo {
@@ -31,14 +31,8 @@ body {
 
 .register_form h2 {
 	text-align: center;
-	margin-bottom: 1rem;
-	font-size: 1.5rem;
-}
-
-.register_form p {
-	text-align: center;
 	margin-bottom: 2rem;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 .register_form label {

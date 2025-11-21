@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './RegisterForm.css';
-import elite_logo from '../assets/photos/elite_logo.png';
+import elite_logo from '../../assets/photos/elite_logo.png';
 
 const RegisterForm = () => {
 	const [formData, setFormData] = useState({
@@ -57,15 +57,15 @@ const RegisterForm = () => {
 				<h2>Create an Account!</h2>
 
 				<label>Username:</label>
-				<input type="text" name="username" value={formData.username} onChange={handleChange} required />
+				<input type="text" name="username" value={formData.username} onChange={handleChange} />
 				{errors.username && <p className="error">{errors.username}</p>}
 
 				<label>Email:</label>
-				<input type="email" name="email" value={formData.email} onChange={handleChange} required />
+				<input type="email" name="email" value={formData.email} onChange={handleChange} />
 				{errors.email && <p className="error">{errors.email}</p>}
 
 				<label>Password:</label>
-				<input type="password" name="password" value={formData.password} onChange={handleChange} required />
+				<input type="password" name="password" value={formData.password} onChange={handleChange} />
 				{errors.password && <p className="error">{errors.password}</p>}
 
 				<button type="submit">Register!</button>
