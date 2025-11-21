@@ -1,4 +1,5 @@
 .navbar_outer {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -6,8 +7,8 @@
 	padding: 0 30px;
 	width: 100%;
 	box-sizing: border-box;
-	border-bottom: 2px solid #2452de;
-	position: relative;
+	border-bottom: 2px solid #a5a5a5;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .logo_img {
@@ -21,6 +22,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	gap: 3rem;
+	margin-left: 5rem;
 }
 
 .navbar a,
