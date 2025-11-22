@@ -115,17 +115,17 @@
 
 /* ! RESPONSIVE */
 @media (max-width: 768px) {
-	.login_container {
+	.register_container {
 		padding: 20px;
 	}
 
-	.login_form {
+	.register_form {
 		width: 100%;
 		padding: 30px;
 		margin: 0 10px;
 	}
 
-	.login_form h2 {
+	.register_form h2 {
 		font-size: 1.5rem;
 	}
 }
