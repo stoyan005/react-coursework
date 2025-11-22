@@ -1,14 +1,11 @@
-/* ! BODY */
-body {
-	background: #e0e0e0;
-}
-
 /* ! REGISTER CONTAINER & FORM */
 .register_container {
+	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 6rem;
+	background: #e0e0e0;
+	width: 100%;
 }
 
 .register_form {
@@ -73,8 +70,8 @@ body {
 	transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
 }
 
-.input_group input:focus + label,
-.input_group input:not(:placeholder-shown) + label {
+.input_group input:focus+label,
+.input_group input:not(:placeholder-shown)+label {
 	top: -2px;
 	font-size: 1rem;
 	color: #007bff;
@@ -109,22 +106,21 @@ body {
 
 .register_form .error {
 	position: absolute;
-	bottom: -1.4rem;
+	top: 100%;
+	left: 0;
+	margin-top: 0.25rem;
 	font-size: 0.9rem;
 	color: #ff4d4f;
 }
 
 /* ! RESPONSIVE */
 @media (max-width: 768px) {
-	.register_container {
-		margin: 6rem 3rem;
-	}
-
-	.register_form {
+	.login_form {
+		width: 90%;
 		padding: 40px;
 	}
 
-	.register_form h2 {
+	.login_form h2 {
 		font-size: 1.5rem;
 	}
 }

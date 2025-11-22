@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
-import elite_logo from '../assets/photos/elite_logo.png';
+import elite_logo from '../../assets/photos/elite_logo.png';
 
 const LoginForm = () => {
 	const [formData, setFormData] = useState({

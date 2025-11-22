@@ -18,11 +18,13 @@
 }
 
 .navbar {
+	position: absolute;
+	left: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 3rem;
-	margin-left: 5rem;
+	transform: translateX(-50%)
 }
 
 .navbar a,
@@ -93,6 +95,7 @@
 }
 
 @media (max-width: 900px) {
+
 	.navbar,
 	.register_wrap {
 		display: none;
