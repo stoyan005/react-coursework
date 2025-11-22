@@ -70,8 +70,8 @@
 	transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
 }
 
-.input_group input:focus+label,
-.input_group input:not(:placeholder-shown)+label {
+.input_group input:focus + label,
+.input_group input:not(:placeholder-shown) + label {
 	top: -2px;
 	font-size: 1rem;
 	color: #007bff;
@@ -115,9 +115,14 @@
 
 /* ! RESPONSIVE */
 @media (max-width: 768px) {
+	.login_container {
+		padding: 20px;
+	}
+
 	.login_form {
 		width: 100%;
 		padding: 30px;
+		margin: 0 10px;
 	}
 
 	.login_form h2 {
