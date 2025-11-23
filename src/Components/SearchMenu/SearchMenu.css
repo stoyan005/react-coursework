@@ -1,0 +1,28 @@
+.search_container {
+	display: flex;
+	justify-content: center;
+}
+
+.search_bar {
+	position: relative;
+	display: inline-block;
+	margin-top: 3rem;
+}
+
+.search_photo {
+	display: block;
+	width: 1000px;
+	height: 500px;
+	border-radius: 30px;
+}
+
+.search_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0 2px 6px rgba(0, 0, 0e, 0.6);
+	transform: translate(-50%, -50%);
+}
