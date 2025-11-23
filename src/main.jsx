@@ -12,6 +12,7 @@ import Contacts from './pages/Contacts';
 import Rent from './pages/Rent';
 import RegisterPage from './pages/Register';
 import LoginPage from './pages/Login';
+import HomePage from './pages';
 
 const router = createBrowserRouter([
 	{
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <Buy />,
+				element: <HomePage />,
 			},
 			{
 				path: 'about',
