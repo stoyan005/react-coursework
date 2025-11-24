@@ -18,13 +18,10 @@
 }
 
 .navbar {
-	position: absolute;
-	left: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	gap: 3rem;
-	transform: translateX(-50%)
 }
 
 .navbar a,
@@ -94,7 +91,21 @@
 	pointer-events: auto;
 }
 
+@media (max-width: 1420px) {
+	.navbar_outer {
+		padding: 0 30px;
+	}
+}
+
 @media (max-width: 900px) {
+	.navbar_outer {
+		padding: 0 20px;
+		height: 70px;
+	}
+
+	.logo_img {
+		height: 55px;
+	}
 
 	.navbar,
 	.register_wrap {
@@ -102,6 +113,6 @@
 	}
 
 	.hamburger {
-		display: block;
+		display: flex;
 	}
 }
