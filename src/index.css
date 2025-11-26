@@ -27,3 +27,11 @@ a {
 	display: flex;
 	flex-direction: column;
 }
+
+.cards_container {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	padding: 20px;
+}
