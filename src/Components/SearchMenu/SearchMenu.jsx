@@ -26,7 +26,7 @@ const SearchMenu = () => {
 					<h2>
 						Search <span>Smarter.</span> Live <span>Better.</span>
 					</h2>
-					<h2>Get started with searching for the right home for you!</h2>
+					<h3>Get started with searching for the right home for you!</h3>
 					<div className="search_input_wrapper">
 						<div className="search_types">
 							{['buy', 'rent', 'sold'].map((tab) => (
