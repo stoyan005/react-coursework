@@ -1,16 +1,22 @@
 import { useState } from 'react';
 import './SearchMenu.css';
-import neighbourhood from '../../assets/photos/neighbourhood.jpg';
-import houseImg from '../../assets/photos/neighbourhood.jpg';
+import house from '../../assets/photos/house.jpg';
+import flat from '../../assets/photos/flat.jpg';
+import bungalow from '../../assets/photos/bungalow.jpg';
+import apartment from '../../assets/photos/apartment.jpg';
+import semi_detached from '../../assets/photos/semi_detached.jpg';
+import cottage from '../../assets/photos/cottage.jpg';
+import terraced from '../../assets/photos/terraced.jpg';
+import home_video from '../../assets/photos/home_video.mp4';
 
 const categories = [
-	{ label: 'House', img: houseImg },
-	{ label: 'Flat', img: houseImg },
-	{ label: 'Bungalow', img: houseImg },
-	{ label: 'Apartment', img: houseImg },
-	{ label: 'Detached House', img: houseImg },
-	{ label: 'Cottage', img: houseImg },
-	{ label: 'Terraced', img: houseImg },
+	{ label: 'House', img: house },
+	{ label: 'Flat', img: flat },
+	{ label: 'Bungalow', img: bungalow },
+	{ label: 'Apartment', img: apartment },
+	{ label: 'Detached House', img: semi_detached },
+	{ label: 'Cottage', img: cottage },
+	{ label: 'Terraced', img: terraced },
 ];
 
 const SearchMenu = () => {
@@ -26,8 +32,14 @@ const SearchMenu = () => {
 	return (
 		<div className="search_container">
 			<div className="search_bar">
-				<img className="search_photo" src={neighbourhood} alt="search" />
-
+				<video
+					className="search_video"
+					src={home_video}
+					alt="home page video"
+					autoPlay
+					loop
+					muted
+				/>
 				<div className="search_overlay">
 					<h2>
 						Search <span>Smarter.</span> Live <span>Better.</span>
