@@ -63,16 +63,17 @@ span {
 
 .search_types {
 	display: flex;
-	gap: 25px;
+	gap: 50px;
 	margin-top: 20px;
 }
 
 .type_button {
-	width: 100%;
+	width: 15%;
 	border: none;
 	cursor: pointer;
-	font-size: 1rem;
-	background: #dcdcdc;
+	font-weight: 700;
+	font-size: 1.25rem;
+	background: #ffffff;
 	color: #111111;
 	transition: 0.25s ease;
 	padding: 12px 0;
@@ -83,13 +84,13 @@ span {
 	transform: translateY(-3px);
 	color: #ffffff;
 	background: #0099ff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .type_button.active {
 	background: #0099ff;
 	color: #ffffff;
-	box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+	box-shadow: 0 2px 4px rgba(0, 153, 255, 0.3);
 }
 
 .search_input_container {

@@ -55,7 +55,7 @@ const SearchMenu = () => {
 								type="text"
 								value={query}
 								onChange={(e) => setQuery(e.target.value)}
-								placeholder="Search for homes..."
+								placeholder={searchTextMap[activeTab]}
 							/>
 							<button type="submit" className="search_button">
 								Search
