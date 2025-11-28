@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './RegisterForm.css';
-import elite_logo from '../../assets/photos/elite_logo.png';
+import elite_logo_nobg2 from '../../assets/photos/elite_logo_nobg2.png';
 
 const RegisterForm = () => {
 	const [formData, setFormData] = useState({
@@ -52,24 +52,46 @@ const RegisterForm = () => {
 		<div className="register_container">
 			<form className="register_form" onSubmit={handleSubmit}>
 				<div className="register_header">
-					<img src={elite_logo} alt="Elite estates logo" className="register_logo" />
+					<img
+						src={elite_logo_nobg2}
+						alt="Elite estates logo"
+						className="register_logo"
+					/>
 				</div>
 				<h2>Create an Account!</h2>
 
 				<div className="input_group">
-					<input type="text" name="username" value={formData.username} onChange={handleChange} placeholder=" " />
+					<input
+						type="text"
+						name="username"
+						value={formData.username}
+						onChange={handleChange}
+						placeholder=" "
+					/>
 					<label>Username:</label>
 					{errors.username && <p className="error">{errors.username}</p>}
 				</div>
 
 				<div className="input_group">
-					<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder=" " />
+					<input
+						type="email"
+						name="email"
+						value={formData.email}
+						onChange={handleChange}
+						placeholder=" "
+					/>
 					<label>Email:</label>
 					{errors.email && <p className="error">{errors.email}</p>}
 				</div>
 
 				<div className="input_group">
-					<input type="password" name="password" value={formData.password} onChange={handleChange} placeholder=" " />
+					<input
+						type="password"
+						name="password"
+						value={formData.password}
+						onChange={handleChange}
+						placeholder=" "
+					/>
 					<label>Password:</label>
 					{errors.password && <p className="error">{errors.password}</p>}
 				</div>

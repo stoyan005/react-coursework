@@ -1,16 +1,15 @@
 import React from 'react';
 import './SearchCard.css';
-import real_estate1 from '../../assets/photos/real_estate1.jpg';
 
-const SearchCard = () => {
+const SearchCard = ({ image, title, description }) => {
 	return (
 		<div className="search_card">
 			<div className="card_image">
-				<img src={real_estate1} alt="real estate photo" />
+				<img src={image} alt={title} />
 			</div>
 			<div className="card_content">
-				<h2>Home Value Estimate</h2>
-				<p>Get an instant estimate of your home’s market value using real-time neighborhood data.</p>
+				<h2>{title}</h2>
+				<p>{description}</p>
 			</div>
 		</div>
 	);

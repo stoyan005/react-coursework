@@ -52,10 +52,18 @@ const Navbar = () => {
 							<Link to="/contacts" onClick={() => setOpen(false)}>
 								Contacts
 							</Link>
-							<Link className="no_underline" to="/register" onClick={() => setOpen(false)}>
+							<Link
+								className="no_underline"
+								to="/register"
+								onClick={() => setOpen(false)}
+							>
 								<RegisterBtn />
 							</Link>
-							<Link className="no_underline" to="/login" onClick={() => setOpen(false)}>
+							<Link
+								className="no_underline"
+								to="/login"
+								onClick={() => setOpen(false)}
+							>
 								<LoginBtn />
 							</Link>
 						</div>
