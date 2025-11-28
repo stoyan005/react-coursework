@@ -34,7 +34,7 @@ const Navbar = () => {
 				</div>
 
 				<div className="hamburger">
-					<Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+					<Hamburger toggled={isOpen} toggle={setOpen} size={24} color="white" />
 					{isOpen && (
 						<div className="mobile_menu">
 							<Link to="/buy" onClick={() => setOpen(false)}>

@@ -114,4 +114,15 @@
 	.hamburger {
 		display: flex;
 	}
+	.mobile_menu a {
+		color: #000000;
+	}
+
+	.mobile_menu a::before {
+		background: #000000;
+	}
+
+	.mobile_menu a:hover::before {
+		background: #000000;
+	}
 }
