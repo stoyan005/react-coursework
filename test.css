@@ -1,156 +1,109 @@
-/* === HERO CONTAINER === */
-.search_container {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.search_bar {
-	position: relative;
-	width: 100%;
-	height: 85vh;
-	overflow: hidden;
-}
-
-/* Background image */
-.search_photo {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-/* Dark overlay */
-.search_overlay {
-	position: relative;
-	z-index: 3;
-	height: 100%;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.45);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	padding: 0 20px;
-	text-align: center;
-}
-
-/* Big heading → (your h2 inside .search_overlay) */
-.search_overlay h2 {
-	font-size: 48px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
-
-/* Subtitle (your h3) */
-.search_overlay h3 {
-	font-size: 28px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
-
-/* === REGION SWITCH (Buy / Rent buttons) === */
-/* region_switch → search_types */
-.search_types {
-	display: flex;
-	gap: 25px;
-	font-size: 18px;
-	margin-bottom: 25px;
-}
-
-/* tab_button → type_button */
-.type_button {
-	width: 100px;
-	border: none;
-	cursor: pointer;
-	font-size: 18px;
-	background: #dcdcdc;
-	color: #333;
-	transition: 0.25s ease;
-	padding: 12px 0;
-	border-radius: 10px;
-}
-
-.type_button:hover {
-	background: #c8c8c8;
-}
-
-.type_button.active {
-	background: #d50032;
-	color: white;
-}
-
-/* === SEARCH BAR BOX === */
-/* search_bar_wrapper → search_input_container */
-.search_input_container {
-	display: flex;
-	width: 55%;
-	min-width: 450px;
-	max-width: 650px;
-	background: white;
-	border-radius: 8px;
-	overflow: hidden;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Input inside the bar */
-.search_input {
-	flex: 1;
-	padding: 18px;
-	font-size: 16px;
-	border: none;
-	outline: none;
-}
-
-/* Search button stays the same */
-.search_button {
-	padding: 10px 45px;
-	background-color: #0a68a7;
-	color: white;
-	font-size: 1.25rem;
-	font-weight: 600;
-	border: none;
-	border-radius: 12px;
-	cursor: pointer;
-	transition: 0.3s ease;
-}
-
-.search_button:hover {
-	background-color: #0099ff;
-}
-
-/* === CATEGORY CARDS SECTION (unchanged) === */
-.categories_section {
-	margin: 50px auto;
-	width: 90%;
+.footer {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	gap: 28px;
+	justify-content: space-between;
+	gap: 2rem;
+	background: #1a1a1a;
+	color: #fff;
+	padding: 2rem 2rem;
+	font-size: 0.95rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
-.category_card {
-	width: 150px;
-	text-align: center;
-	cursor: pointer;
+/* Top row */
+
+.footer__brand h3 {
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 700;
 }
 
-.category_card img {
-	width: 150px;
-	height: 95px;
-	object-fit: cover;
-	border-radius: 8px;
-	transition: 0.25s ease;
+.footer__brand p {
+	margin: 0.3rem 0 0 0;
+	color: #ccc;
 }
 
-.category_card img:hover {
-	transform: scale(1.02);
-}
-
-.category_card p {
-	margin-top: 8px;
-	font-size: 15px;
-	color: #333;
+.footer__brand span {
+	color: #fff;
 	font-weight: 500;
+}
+
+.footer__links {
+	display: flex;
+	gap: 3rem;
+}
+
+.links__group h4 {
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	color: #aaa;
+	font-weight: 600;
+}
+
+.links__group a {
+	display: block;
+	text-decoration: none;
+	color: #ccc;
+	margin-bottom: 0.3rem;
+	transition: color 0.2s ease;
+}
+
+.links__group a:hover {
+	color: #fff;
+}
+
+/* Bottom row */
+.footer__bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-top: 1px solid #333;
+	padding-top: 1rem;
+	gap: 1rem;
+}
+
+.footer__contact p {
+	margin: 0.2rem 0;
+}
+
+.footer__contact a {
+	color: #ccc;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.footer__contact a:hover {
+	color: #fff;
+}
+
+.footer__social a {
+	display: inline-block;
+	margin-left: 1rem;
+	text-decoration: none;
+	color: #ccc;
+	font-weight: 600;
+	transition: color 0.2s ease;
+}
+
+.footer__social a:hover {
+	color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.footer__top,
+	.footer__bottom {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.footer__links {
+		gap: 2rem;
+	}
+
+	.footer__social a {
+		margin-left: 0.5rem;
+	}
 }

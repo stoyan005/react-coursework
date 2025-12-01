@@ -1,7 +1,108 @@
-.footer_container {
-	margin-top: auto;
-	background: #201e1e;
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: #1a1a1a;
 	color: #ffffff;
-	padding: 20px;
-	text-align: center;
+	padding: 1rem 2rem;
+	font-size: 1rem;
+}
+
+.footer_logo h3 {
+	margin: 1rem 0 0;
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+.footer_logo p {
+	margin: 0.3rem 0 0 0;
+	font-weight: 700;
+}
+
+.footer_logo svg {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	margin: 1rem 1rem 0 0rem;
+	transition: all 0.3s ease;
+}
+
+.footer_logo .icon {
+	color: #ffffff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.footer_logo .icon_instagram:hover {
+	transform: rotate(-10deg) scale(1.5);
+	color: #c527e5;
+}
+
+.footer_logo .icon_twitter:hover {
+	transform: rotate(-10deg) scale(1.5);
+	color: #139dc7;
+}
+
+.footer_logo .icon_facebook:hover {
+	transform: rotate(-10deg) scale(1.5);
+	color: #1352c7;
+}
+
+.footer_logo .icon_youtube:hover {
+	transform: rotate(-10deg) scale(1.5);
+	color: #e52d27;
+}
+
+span {
+	color: #c78e13;
+}
+
+.footer_links {
+	display: flex;
+	gap: 5rem;
+}
+
+.links h4 {
+	margin: 0.5rem 0 0.5rem;
+	font-size: 1rem;
+	color: #ff6666;
+	font-weight: 600;
+}
+
+.links a {
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	transition: 0.3s ease;
+	margin: 0.7rem 0 0;
+}
+
+.links a:hover {
+	color: #b4b4b4;
+}
+
+.footer_contact p {
+	margin: 1rem 0;
+}
+
+.footer_contact a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footer_contact a:hover {
+	color: #b4b4b4;
+}
+
+.footer_contact a svg {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 1rem;
+	transition: all 0.3s ease;
+}
+
+.footer_contact a:hover svg {
+	transform: rotate(-10deg) scale(1.5);
 }
