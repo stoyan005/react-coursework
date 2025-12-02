@@ -149,6 +149,9 @@ const FooterInfo = () => {
 					</a>
 				</p>
 			</div>
+			<div className="footer_below">
+				<p>&copy; {new Date().getFullYear()} EliteEstates. All Rights Reserved</p>
+			</div>
 		</footer>
 	);
 };
