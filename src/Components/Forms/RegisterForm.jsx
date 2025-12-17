@@ -98,6 +98,10 @@ const RegisterForm = () => {
 
 				<button type="submit">Register!</button>
 
+				<p className="account_login">
+					<a href="/login">Already have an account? Login!</a>
+				</p>
+
 				{registered && <p className="success_message">Registered!</p>}
 			</form>
 		</div>

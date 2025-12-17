@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import './Navbar.css';
 import RegisterBtn from './RegisterBtn.jsx';
-import LoginBtn from './LoginBtn.jsx';
 import elite_logo from '../../assets/photos/elite_logo.png';
 
 const Navbar = () => {
@@ -27,9 +26,6 @@ const Navbar = () => {
 				<div className="register_wrap">
 					<Link to="/register">
 						<RegisterBtn />
-					</Link>
-					<Link to="/login">
-						<LoginBtn />
 					</Link>
 				</div>
 
@@ -58,13 +54,6 @@ const Navbar = () => {
 								onClick={() => setOpen(false)}
 							>
 								<RegisterBtn />
-							</Link>
-							<Link
-								className="no_underline"
-								to="/login"
-								onClick={() => setOpen(false)}
-							>
-								<LoginBtn />
 							</Link>
 						</div>
 					)}

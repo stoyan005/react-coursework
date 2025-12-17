@@ -20,7 +20,7 @@ const LoginForm = () => {
 		const newErrors = {};
 
 		if (!formData.username.trim()) {
-			newErrors.username = 'Username is required';
+			newErrors.username = 'Username / Email is required';
 		}
 
 		if (!formData.password.trim()) {
@@ -65,7 +65,7 @@ const LoginForm = () => {
 						onChange={handleChange}
 						placeholder=" "
 					/>
-					<label>Username:</label>
+					<label>Username / Email:</label>
 					{errors.username && <p className="error">{errors.username}</p>}
 				</div>
 
