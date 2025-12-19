@@ -44,7 +44,10 @@ const SearchMenu = () => {
 					<h2>
 						Search <span>Smarter.</span> Live <span>Better.</span>
 					</h2>
-					<h3>Get started with searching for the right home for you!</h3>
+					<h3>
+						Step into a world of exceptional homes where comfort, style, and
+						convenience come together. Make your dream home a reality.
+					</h3>
 
 					<div className="search_input_wrapper">
 						<h4 className="property_text">{searchTextMap[activeTab]}</h4>

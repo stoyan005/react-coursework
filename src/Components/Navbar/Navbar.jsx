@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import './Navbar.css';
@@ -8,6 +8,18 @@ import elite_logo from '../../assets/photos/elite_logo.png';
 const Navbar = () => {
 	const [isOpen, setOpen] = useState(false);
 
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
+		}
+
+		return () => {
+			document.body.style.overflow = 'auto';
+		};
+	}, [isOpen]);
+
 	return (
 		<header>
 			<div className="navbar_outer">
@@ -16,11 +28,11 @@ const Navbar = () => {
 				</Link>
 
 				<nav className="navbar">
-					<Link to="/buy">Buy</Link>
-					<Link to="/rent">Rent</Link>
-					<Link to="/agents">Agents</Link>
-					<Link to="/about">About</Link>
-					<Link to="/contacts">Contacts</Link>
+					<Link to="/buy">Buying a Property</Link>
+					<Link to="/rent">Renting a Property</Link>
+					<Link to="/agents">Meet Our Agents</Link>
+					<Link to="/about">Why Choose EliteEstates?</Link>
+					<Link to="/contacts">Contact Us</Link>
 				</nav>
 
 				<div className="register_wrap">
@@ -34,25 +46,21 @@ const Navbar = () => {
 					{isOpen && (
 						<div className="mobile_menu">
 							<Link to="/buy" onClick={() => setOpen(false)}>
-								Buy
+								Buying a Property
 							</Link>
 							<Link to="/rent" onClick={() => setOpen(false)}>
-								Rent
+								Renting a Property
 							</Link>
 							<Link to="/agents" onClick={() => setOpen(false)}>
-								Agents
+								Meet Our Agents
 							</Link>
 							<Link to="/about" onClick={() => setOpen(false)}>
-								About
+								Why Choose EliteEstates?
 							</Link>
 							<Link to="/contacts" onClick={() => setOpen(false)}>
-								Contacts
+								Contact Us
 							</Link>
-							<Link
-								className="no_underline"
-								to="/register"
-								onClick={() => setOpen(false)}
-							>
+							<Link to="/register" onClick={() => setOpen(false)}>
 								<RegisterBtn />
 							</Link>
 						</div>
