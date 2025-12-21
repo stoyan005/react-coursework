@@ -1,23 +1,7 @@
 import { useState } from 'react';
 import './SearchMenu.css';
-import house from '../../assets/photos/house.jpg';
-import flat from '../../assets/photos/flat.jpg';
-import bungalow from '../../assets/photos/bungalow.jpg';
-import apartment from '../../assets/photos/apartment.jpg';
-import semi_detached from '../../assets/photos/semi_detached.jpg';
-import cottage from '../../assets/photos/cottage.jpg';
-import terraced from '../../assets/photos/terraced.jpg';
+import SearchButton from './SearchButton';
 import home_video from '../../assets/photos/home_video.mp4';
-
-const categories = [
-	{ label: 'House', img: house },
-	{ label: 'Flat', img: flat },
-	{ label: 'Bungalow', img: bungalow },
-	{ label: 'Apartment', img: apartment },
-	{ label: 'Detached House', img: semi_detached },
-	{ label: 'Cottage', img: cottage },
-	{ label: 'Terraced', img: terraced },
-];
 
 const SearchMenu = () => {
 	const [query, setQuery] = useState('');
@@ -49,6 +33,9 @@ const SearchMenu = () => {
 						convenience come together. Make your dream home a reality.
 					</h3>
 
+					<SearchButton />
+					<SearchButton />
+					{/*
 					<div className="search_input_wrapper">
 						<h4 className="property_text">{searchTextMap[activeTab]}</h4>
 
@@ -78,16 +65,8 @@ const SearchMenu = () => {
 							))}
 						</div>
 					</div>
+					*/}
 				</div>
-			</div>
-
-			<div className="categories_section">
-				{categories.map((item, index) => (
-					<div key={index} className="category_card">
-						<img src={item.img} alt={item.label} />
-						<p>{item.label}</p>
-					</div>
-				))}
 			</div>
 		</div>
 	);

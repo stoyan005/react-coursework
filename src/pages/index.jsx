@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchMenu from '../Components/SearchMenu/SearchMenu';
+import Categories from '../Components/SearchMenu/Categories';
 import SearchCard from '../Components/SearchCards/SearchCard';
 import real_estate1 from '../assets/photos/real_estate1.jpg';
 import mortgage_calc from '../assets/photos/mortgage_calc.jpg';
@@ -9,6 +10,9 @@ const HomePage = () => {
 	return (
 		<>
 			<SearchMenu />
+			<div>
+				<Categories />
+			</div>
 			<div className="cards_container">
 				<SearchCard
 					image={real_estate1}

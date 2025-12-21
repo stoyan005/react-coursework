@@ -7,7 +7,7 @@
 	width: 100%;
 	z-index: 1000;
 	background: #2b2b2b;
-	padding: 0 50px;
+	padding: 1px 50px;
 	box-sizing: border-box;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -33,6 +33,12 @@
 	color: #ffffff;
 	font-weight: 600;
 	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.mobile_menu a:hover {
+	color: #c9a050;
 }
 
 .register_wrap {
