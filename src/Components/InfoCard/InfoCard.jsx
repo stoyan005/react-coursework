@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SearchCard.module.css';
+import styles from './InfoCard.module.css';
 
 const SearchCard = ({ image, title, description }) => {
 	return (

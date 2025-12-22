@@ -29,11 +29,14 @@ const SearchMenu = () => {
 						Search <span>Smarter.</span> Live <span>Better.</span>
 					</h2>
 					<h3>
-						Step into a world of exceptional homes where comfort, style, and
-						convenience come together. Make your dream home a reality.
+						Step into a world of exceptional homes, where comfort, style, and
+						convenience come together. Explore carefully curated properties
+						designed to suit your lifestyle and make your dream home a reality.
 					</h3>
-
-					<SearchButton />
+					<div className={styles.search_btn}>
+						<SearchButton title="Search here!" />
+						<SearchButton title="Contacts!" />
+					</div>
 					{/*
 					<div className="search_input_wrapper">
 						<h4 className="property_text">{searchTextMap[activeTab]}</h4>
