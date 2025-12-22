@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './SearchMenu.module.css';
 import SearchButton from './SearchButton';
+import ContactButton from './ContactButton';
 import home_video from '../../assets/photos/home_video.mp4';
 
 const SearchMenu = () => {
@@ -34,8 +35,8 @@ const SearchMenu = () => {
 						designed to suit your lifestyle and make your dream home a reality.
 					</h3>
 					<div className={styles.search_btn}>
-						<SearchButton title="Search here!" />
-						<SearchButton title="Contacts!" />
+						<SearchButton title="Search Properties" />
+						<ContactButton title="Contact Us" />
 					</div>
 					{/*
 					<div className="search_input_wrapper">

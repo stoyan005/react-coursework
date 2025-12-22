@@ -8,6 +8,10 @@
 	font-family: 'Radio Canada', sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #f0f0f0;
 }

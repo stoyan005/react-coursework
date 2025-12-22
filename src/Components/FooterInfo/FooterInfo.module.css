@@ -30,26 +30,29 @@
 
 .footer_logo .icon {
 	color: #ffffff;
-	cursor: pointer;
 	transition: all 0.3s ease;
 }
 
 .footer_logo .icon_instagram:hover {
+	cursor: pointer;
 	transform: rotate(-10deg) scale(1.5);
 	color: #c527e5;
 }
 
 .footer_logo .icon_twitter:hover {
+	cursor: pointer;
 	transform: rotate(-10deg) scale(1.5);
 	color: #139dc7;
 }
 
 .footer_logo .icon_facebook:hover {
+	cursor: pointer;
 	transform: rotate(-10deg) scale(1.5);
 	color: #1352c7;
 }
 
 .footer_logo .icon_youtube:hover {
+	cursor: pointer;
 	transform: rotate(-10deg) scale(1.5);
 	color: #e52d27;
 }

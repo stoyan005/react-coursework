@@ -76,15 +76,15 @@ const FooterInfo = () => {
 			<div className={styles.footer_links}>
 				<div className={styles.links}>
 					<h4>Explore</h4>
-					<a href="/properties">Properties</a>
+					<a href="/buy">Properties</a>
 					<a href="/agents">Agents</a>
-					<a href="/services">Services</a>
+					<a href="/#top">Services</a>
 				</div>
 				<div className={styles.links}>
 					<h4>Company</h4>
 					<a href="/about">About</a>
-					<a href="/blog">Blog</a>
-					<a href="/contact">Contact</a>
+					<a href="/agents">Agents</a>
+					<a href="/contacts">Contacts</a>
 				</div>
 			</div>
 
