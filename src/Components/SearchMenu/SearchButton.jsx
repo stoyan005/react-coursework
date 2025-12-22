@@ -1,8 +1,8 @@
 import React from 'react';
-import './SearchButton.css';
+import styles from './SearchButton.module.css';
 
 const SearchButton = () => {
-	return <button className="register_button">Register</button>;
+	return <button className={styles.search_here}>Search Here</button>;
 };
 
 export default SearchButton;

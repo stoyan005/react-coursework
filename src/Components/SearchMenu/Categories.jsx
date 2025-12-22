@@ -1,5 +1,5 @@
 import React from 'react';
-import './Categories.css';
+import styles from './Categories.module.css';
 import house from '../../assets/photos/house.jpg';
 import flat from '../../assets/photos/flat.jpg';
 import bungalow from '../../assets/photos/bungalow.jpg';
@@ -20,9 +20,9 @@ const categories = [
 
 const Categories = () => {
 	return (
-		<div className="categories_section">
+		<div className={styles.categories_section}>
 			{categories.map((item, index) => (
-				<div key={index} className="category_card">
+				<div key={index} className={styles.category_card}>
 					<img src={item.img} alt={item.label} />
 					<p>{item.label}</p>
 				</div>

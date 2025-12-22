@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './RegisterForm.css';
+import styles from './RegisterForm.module.css';
 import elite_logo_nobg2 from '../../assets/photos/elite_logo_nobg2.png';
 
 const RegisterForm = () => {
@@ -49,18 +49,18 @@ const RegisterForm = () => {
 	};
 
 	return (
-		<div className="register_container">
-			<form className="register_form" onSubmit={handleSubmit}>
-				<div className="register_header">
+		<div className={styles.register_container}>
+			<form className={styles.register_form} onSubmit={handleSubmit}>
+				<div className={styles.register_header}>
 					<img
 						src={elite_logo_nobg2}
 						alt="Elite estates logo"
-						className="register_logo"
+						className={styles.register_logo}
 					/>
 				</div>
 				<h2>Create an Account!</h2>
 
-				<div className="input_group">
+				<div className={styles.input_group}>
 					<input
 						type="text"
 						name="username"
@@ -69,10 +69,10 @@ const RegisterForm = () => {
 						placeholder=" "
 					/>
 					<label>Username:</label>
-					{errors.username && <p className="error">{errors.username}</p>}
+					{errors.username && <p className={styles.error}>{errors.username}</p>}
 				</div>
 
-				<div className="input_group">
+				<div className={styles.input_group}>
 					<input
 						type="email"
 						name="email"
@@ -81,10 +81,10 @@ const RegisterForm = () => {
 						placeholder=" "
 					/>
 					<label>Email:</label>
-					{errors.email && <p className="error">{errors.email}</p>}
+					{errors.email && <p className={styles.error}>{errors.email}</p>}
 				</div>
 
-				<div className="input_group">
+				<div className={styles.input_group}>
 					<input
 						type="password"
 						name="password"
@@ -93,16 +93,18 @@ const RegisterForm = () => {
 						placeholder=" "
 					/>
 					<label>Password:</label>
-					{errors.password && <p className="error">{errors.password}</p>}
+					{errors.password && <p className={styles.error}>{errors.password}</p>}
 				</div>
 
-				<button type="submit">Register!</button>
+				<button type="submit" className={styles.submit_button}>
+					Register!
+				</button>
 
-				<p className="account_login">
+				<p className={styles.account_login}>
 					<a href="/login">Already have an account? Login!</a>
 				</p>
 
-				{registered && <p className="success_message">Registered!</p>}
+				{registered && <p className={styles.success_message}>Registered!</p>}
 			</form>
 		</div>
 	);

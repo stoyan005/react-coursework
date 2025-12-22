@@ -1,4 +1,4 @@
-.register-button {
+.register_button {
 	color: #ffffff;
 	font-weight: 600;
 	border: none;
@@ -11,6 +11,6 @@
 	transition: all 0.4s ease-in-out;
 }
 
-.register-button:hover {
+.register_button:hover {
 	background-color: #0099ff;
 }

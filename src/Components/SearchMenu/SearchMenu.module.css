@@ -50,7 +50,7 @@
 	text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-span {
+.search_overlay h2 span {
 	color: #c78e13;
 }
 

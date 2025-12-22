@@ -1,13 +1,13 @@
 import React from 'react';
-import './SearchCard.css';
+import styles from './SearchCard.module.css';
 
 const SearchCard = ({ image, title, description }) => {
 	return (
-		<div className="search_card">
-			<div className="card_image">
+		<div className={styles.search_card}>
+			<div className={styles.card_image}>
 				<img src={image} alt={title} />
 			</div>
-			<div className="card_content">
+			<div className={styles.card_content}>
 				<h2>{title}</h2>
 				<p>{description}</p>
 			</div>

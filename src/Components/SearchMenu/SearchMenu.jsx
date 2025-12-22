@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './SearchMenu.css';
+import styles from './SearchMenu.module.css';
 import SearchButton from './SearchButton';
 import home_video from '../../assets/photos/home_video.mp4';
 
@@ -14,17 +14,17 @@ const SearchMenu = () => {
 	};
 
 	return (
-		<div className="search_container">
-			<div className="search_bar">
+		<div className={styles.search_container}>
+			<div className={styles.search_bar}>
 				<video
-					className="search_video"
+					className={styles.search_video}
 					src={home_video}
 					alt="home page video"
 					autoPlay
 					loop
 					muted
 				/>
-				<div className="search_overlay">
+				<div className={styles.search_overlay}>
 					<h2>
 						Search <span>Smarter.</span> Live <span>Better.</span>
 					</h2>
@@ -33,7 +33,6 @@ const SearchMenu = () => {
 						convenience come together. Make your dream home a reality.
 					</h3>
 
-					<SearchButton />
 					<SearchButton />
 					{/*
 					<div className="search_input_wrapper">

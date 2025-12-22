@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './LoginForm.css';
+import styles from './LoginForm.module.css';
 import elite_logo_nobg2 from '../../assets/photos/elite_logo_nobg2.png';
 
 const LoginForm = () => {
@@ -46,18 +46,18 @@ const LoginForm = () => {
 	};
 
 	return (
-		<div className="login_container">
-			<form className="login_form" onSubmit={handleSubmit}>
-				<div className="login_header">
+		<div className={styles.login_container}>
+			<form className={styles.login_form} onSubmit={handleSubmit}>
+				<div className={styles.login_header}>
 					<img
 						src={elite_logo_nobg2}
 						alt="Elite estates logo"
-						className="login_logo"
+						className={styles.login_logo}
 					/>
 				</div>
 				<h2>Login to an Existing Account!</h2>
 
-				<div className="input_group">
+				<div className={styles.input_group}>
 					<input
 						type="text"
 						name="username"
@@ -66,10 +66,10 @@ const LoginForm = () => {
 						placeholder=" "
 					/>
 					<label>Username / Email:</label>
-					{errors.username && <p className="error">{errors.username}</p>}
+					{errors.username && <p className={styles.error}>{errors.username}</p>}
 				</div>
 
-				<div className="input_group">
+				<div className={styles.input_group}>
 					<input
 						type="password"
 						name="password"
@@ -78,12 +78,14 @@ const LoginForm = () => {
 						placeholder=" "
 					/>
 					<label>Password:</label>
-					{errors.password && <p className="error">{errors.password}</p>}
+					{errors.password && <p className={styles.error}>{errors.password}</p>}
 				</div>
 
-				<button type="submit">Login!</button>
+				<button type="submit" className={styles.submit_button}>
+					Login!
+				</button>
 
-				{loggedIn && <p className="success_message">Login successful!</p>}
+				{loggedIn && <p className={styles.success_message}>Login successful!</p>}
 			</form>
 		</div>
 	);

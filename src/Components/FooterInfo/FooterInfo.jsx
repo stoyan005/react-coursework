@@ -1,16 +1,16 @@
-import './FooterInfo.css';
+import styles from './FooterInfo.module.css';
 
 const FooterInfo = () => {
 	return (
-		<footer className="footer">
-			<div className="footer_logo">
+		<footer className={styles.footer}>
+			<div className={styles.footer_logo}>
 				<h3>Elite Estates</h3>
 				<p>
 					Search <span>Smarter.</span> Live <span>Better.</span>
 				</p>
 
 				<svg
-					className="icon icon_instagram"
+					className={styles.icon_instagram}
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -27,7 +27,7 @@ const FooterInfo = () => {
 				</svg>
 
 				<svg
-					className="icon icon_twitter"
+					className={styles.icon_twitter}
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -42,7 +42,7 @@ const FooterInfo = () => {
 				</svg>
 
 				<svg
-					className="icon icon_facebook"
+					className={styles.icon_facebook}
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -57,7 +57,7 @@ const FooterInfo = () => {
 				</svg>
 
 				<svg
-					className="icon icon_youtube"
+					className={styles.icon_youtube}
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -73,14 +73,14 @@ const FooterInfo = () => {
 				</svg>
 			</div>
 
-			<div className="footer_links">
-				<div className="links">
+			<div className={styles.footer_links}>
+				<div className={styles.links}>
 					<h4>Explore</h4>
 					<a href="/properties">Properties</a>
 					<a href="/agents">Agents</a>
 					<a href="/services">Services</a>
 				</div>
-				<div className="links">
+				<div className={styles.links}>
 					<h4>Company</h4>
 					<a href="/about">About</a>
 					<a href="/blog">Blog</a>
@@ -88,7 +88,7 @@ const FooterInfo = () => {
 				</div>
 			</div>
 
-			<div className="footer_contact">
+			<div className={styles.footer_contact}>
 				<p>
 					<a href="#">
 						<svg
@@ -101,7 +101,7 @@ const FooterInfo = () => {
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className="lucide lucide-map-pin-icon lucide-map-pin"
+							className={styles.map_pin_icon}
 						>
 							<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
 							<circle cx="12" cy="10" r="3" />
@@ -121,7 +121,7 @@ const FooterInfo = () => {
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className="lucide lucide-phone-icon lucide-phone"
+							className={styles.phone_icon}
 						>
 							<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
 						</svg>
@@ -140,7 +140,7 @@ const FooterInfo = () => {
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className="lucide lucide-mail-icon lucide-mail"
+							className={styles.mail_icon}
 						>
 							<path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
 							<rect x="2" y="4" width="20" height="16" rx="2" />
@@ -149,7 +149,8 @@ const FooterInfo = () => {
 					</a>
 				</p>
 			</div>
-			<div className="footer_below">
+
+			<div className={styles.footer_below}>
 				<p>&copy; {new Date().getFullYear()} EliteEstates. All Rights Reserved</p>
 			</div>
 		</footer>

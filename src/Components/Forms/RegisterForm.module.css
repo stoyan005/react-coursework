@@ -1,35 +1,37 @@
-/* ! LOGIN CONTAINER & FORM */
-.login_container {
+/* ! REGISTER CONTAINER & FORM */
+.register_container {
 	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: #e0e0e0;
 	width: 100%;
+	margin-top: 75px;
 }
 
-.login_form {
+.register_form {
 	background: #ffffff;
 	padding: 40px 40px;
 	border-radius: 20px;
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 	width: 100%;
 	max-width: 500px;
+	margin: 50px;
 }
 
 /* ! HEADER & LOGO */
-.login_header {
+.register_header {
 	text-align: center;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #e0e0e0;
 	margin-bottom: 1.5rem;
 }
 
-.login_logo {
+.register_logo {
 	max-width: 150px;
 }
 
-.login_form h2 {
+.register_form h2 {
 	text-align: center;
 	margin-bottom: 2.5rem;
 	font-size: 1.5rem;
@@ -77,8 +79,8 @@
 	color: #007bff;
 }
 
-/* ! LOGIN BUTTON */
-.login_form button {
+/* ! REGISTER BUTTON */
+.register_form button {
 	width: 100%;
 	padding: 1rem;
 	margin-top: 1rem;
@@ -92,19 +94,19 @@
 	transition: background-color 0.3s ease;
 }
 
-.login_form button:hover {
+.register_form button:hover {
 	background-color: #0056b3;
 }
 
-/* ! SUCCESS AND ERROR MESSAGES*/
-.login_form .success_message {
+/* ! SUCCESS & ERROR MESSAGES */
+.register_form .success_message {
 	margin-top: 1.5rem;
 	color: #28a745;
 	font-weight: bold;
 	text-align: center;
 }
 
-.login_form .error {
+.register_form .error {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -115,17 +117,34 @@
 
 /* ! RESPONSIVE */
 @media (max-width: 768px) {
-	.login_container {
+	.register_container {
 		padding: 20px;
 	}
 
-	.login_form {
+	.register_form {
 		width: 100%;
 		padding: 30px;
 		margin: 0 10px;
 	}
 
-	.login_form h2 {
+	.register_form h2 {
 		font-size: 1.5rem;
 	}
+}
+
+.account_login {
+	text-align: center;
+	margin-top: 2rem;
+	font-size: 0.95rem;
+}
+
+.account_login a {
+	color: #007bff;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.account_login a:hover {
+	color: #0056b3;
+	text-decoration: underline;
 }

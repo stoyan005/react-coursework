@@ -1,8 +1,8 @@
 import React from 'react';
-import './RegisterBtn.css';
+import styles from './RegisterBtn.module.css';
 
 const RegisterBtn = () => {
-	return <button className="register-button">Register</button>;
+	return <button className={styles.register_button}>Register</button>;
 };
 
 export default RegisterBtn;
