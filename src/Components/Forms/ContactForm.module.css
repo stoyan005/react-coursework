@@ -1,0 +1,120 @@
+.contact_container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e0e0e0;
+	width: 100%;
+	margin-top: 75px;
+}
+
+.contact_form {
+	background: #ffffff;
+	padding: 40px 40px;
+	border-radius: 20px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 500px;
+	margin: 50px;
+}
+
+.contact_header {
+	text-align: center;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 1.5rem;
+}
+
+.contact_logo {
+	max-width: 150px;
+}
+
+.contact_form h2 {
+	text-align: center;
+	margin-bottom: 2.5rem;
+	font-size: 1.5rem;
+}
+
+.input_contact {
+	position: relative;
+	margin-bottom: 2.5rem;
+}
+
+.input_contact input {
+	width: 100%;
+	padding: 12px;
+	font-size: 1rem;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	background: transparent;
+	outline: none;
+	box-sizing: border-box;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input_contact input:focus {
+	border-color: #eeae5b;
+	box-shadow: 0 0 10px rgba(125, 125, 255, 0.3);
+}
+
+.input_contact label {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	color: #888888;
+	background: #ffffff;
+	padding: 0px 10px;
+	pointer-events: none;
+	transform: translateY(-50%);
+	transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.input_contact input:focus + label,
+.input_contact input:not(:placeholder-shown) + label,
+.input_contact textarea:focus + label,
+.input_contact textarea:not(:placeholder-shown) + label {
+	top: -2px;
+	font-size: 1rem;
+	color: #eeae5b;
+}
+
+.contact_form button {
+	width: 100%;
+	padding: 1rem;
+	margin-top: 1rem;
+	background: #007bff;
+	color: #ffffff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.contact_form button:hover {
+	background-color: #0056b3;
+}
+
+.input_contact textarea {
+	width: 100%;
+	padding: 15px;
+	font-size: 1rem;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	background: transparent;
+	outline: none;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.input_contact textarea + label {
+	position: absolute;
+	top: 20px;
+	left: 5px;
+	color: #888888;
+	background: #ffffff;
+	padding: 0 10px;
+	pointer-events: none;
+	transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
