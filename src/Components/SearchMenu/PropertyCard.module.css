@@ -1,18 +1,18 @@
 .property_card {
-	width: 600px; /* fixed card width */
-	max-width: 100%;
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: #ffffff;
+	width: 600px;
+	max-width: 100%;
+	overflow: visible;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .property_image {
 	width: 100%;
-	height: 200px; /* fixed image height */
-	object-fit: cover; /* maintains aspect ratio, crops excess */
+	height: 200px;
+	object-fit: cover;
 }
 
 .card_content {
@@ -20,49 +20,54 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 15px;
+	padding: 20px;
 	box-sizing: border-box;
 }
 
 .badges {
+	margin: 5px 0px 15px 0px;
+	font-size: 0.9rem;
+	color: #111111;
+}
+
+.badges_wrapper {
 	display: flex;
-	gap: 10px;
-	margin-bottom: 10px;
-	font-size: 0.85rem;
-	color: #555;
+	justify-content: space-between;
 }
 
 .tenure {
-	background-color: #f0f0f0;
-	padding: 2px 6px;
+	background-color: #f1f1f1;
+	padding: 2px 2px;
 	border-radius: 4px;
 }
 
 .dateAdded {
-	color: #888;
+	color: #888888;
+	background-color: #f1f1f1;
+	padding: 2px 3px;
+	border-radius: 4px;
 }
 
 .description {
+	flex-shrink: 0;
 	font-size: 0.9rem;
-	margin-bottom: 10px;
-	flex-shrink: 0; /* prevent shrinking when content is short */
+	margin-bottom: 30px;
 }
 
 .card_details {
 	display: flex;
 	justify-content: space-between;
 	font-weight: 600;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .view_button {
-	text-align: center;
 	display: block;
+	text-align: center;
 	background-color: #0099ff;
-	color: #fff;
-	padding: 8px 0;
-	border-radius: 5px;
-	text-decoration: none;
+	color: #ffffff;
+	padding: 10px 0;
+	border-radius: 10px;
 	font-weight: 600;
 	transition: background-color 0.3s ease;
 }

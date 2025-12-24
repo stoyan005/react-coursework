@@ -1,7 +1,12 @@
 import React from 'react';
+import SearchBar from '../Components/SearchMenu/SearchBar';
 
 const BuyPage = () => {
-	return <h1>This is the Buy page</h1>;
+	return (
+		<>
+			<SearchBar />
+		</>
+	);
 };
 
 export default BuyPage;

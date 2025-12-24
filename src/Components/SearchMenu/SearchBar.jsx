@@ -1,3 +1,8 @@
+import React, { useState, useMemo, use } from 'react';
+import data from '../../../properties/properties.json';
+import PropertyCard from './PropertyCard';
+import styles from './SearchBar.module.css';
+
 const SearchBar = () => {
 	const [query, setQuery] = useState('');
 	const [activeTab, setActiveTab] = useState('buy');
@@ -47,6 +52,11 @@ const SearchBar = () => {
 				</div>
 			</div>
 
+			<p className={styles.properties_found}>
+				{filteredProperties.length} of {properties.length}{' '}
+				{properties.length === 1 ? 'property' : 'properties'} found
+			</p>
+
 			<div className={styles.properties_list}>
 				{filteredProperties.length === 0 ? (
 					<p>No properties found.</p>
@@ -59,3 +69,5 @@ const SearchBar = () => {
 		</div>
 	);
 };
+
+export default SearchBar;
