@@ -29,7 +29,6 @@ const Navbar = () => {
 
 				<nav className={styles.navbar}>
 					<Link to="/buy">Buying a Property</Link>
-					<Link to="/rent">Renting a Property</Link>
 					<Link to="/agents">Meet Our Agents</Link>
 					<Link to="/about">Why Choose EliteEstates?</Link>
 					<Link to="/contacts">Contact Us</Link>
@@ -47,9 +46,6 @@ const Navbar = () => {
 						<div className={styles.mobile_menu}>
 							<Link to="/buy" onClick={() => setOpen(false)}>
 								Buying a Property
-							</Link>
-							<Link to="/rent" onClick={() => setOpen(false)}>
-								Renting a Property
 							</Link>
 							<Link to="/agents" onClick={() => setOpen(false)}>
 								Meet Our Agents

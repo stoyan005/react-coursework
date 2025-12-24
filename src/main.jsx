@@ -9,7 +9,6 @@ import About from './pages/About';
 import Agents from './pages/Agents';
 import Buy from './pages/Buy';
 import Contacts from './pages/Contacts';
-import Rent from './pages/Rent';
 import RegisterPage from './pages/Register';
 import LoginPage from './pages/Login';
 import HomePage from './pages';
@@ -34,10 +33,6 @@ const router = createBrowserRouter([
 			{
 				path: 'buy',
 				element: <Buy />,
-			},
-			{
-				path: 'rent',
-				element: <Rent />,
 			},
 			{
 				path: 'contacts',
