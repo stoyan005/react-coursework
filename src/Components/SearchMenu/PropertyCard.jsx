@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './PropertyCard.module.css';
+import { IoBed } from 'react-icons/io5';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FaMoneyBillWave } from 'react-icons/fa';
 
 const lengthText = (text, maxLength) =>
 	text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
@@ -21,9 +24,16 @@ const PropertyCard = ({ property }) => {
 				</div>
 				<p className={styles.description}>{lengthText(property.description, 260)}</p>
 				<div className={styles.card_details}>
-					<p>{property.bedrooms}</p>
-					<p>{property.location}</p>
-					<p>£{property.price.toLocaleString()}</p>
+					<p>
+						<IoBed className={styles.icon} /> {property.bedrooms}
+					</p>
+					<p>
+						<FaLocationDot className={styles.icon} /> {property.location}
+					</p>
+					<p>
+						<FaMoneyBillWave className={styles.icon} /> £
+						{property.price.toLocaleString()}
+					</p>
 				</div>
 				<a href={property.url} className={styles.view_button}>
 					View Property Here!

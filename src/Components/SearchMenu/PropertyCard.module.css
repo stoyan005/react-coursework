@@ -75,3 +75,9 @@
 .view_button:hover {
 	background-color: #0a68a7;
 }
+
+.icon {
+	margin-right: 5px;
+	vertical-align: middle;
+	color: #555;
+}
