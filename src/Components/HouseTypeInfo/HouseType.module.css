@@ -1,0 +1,74 @@
+.container {
+	padding: 20px;
+	max-width: 900px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+.title {
+	font-size: 2rem;
+	margin-bottom: 5px;
+}
+
+.location {
+	font-size: 1.2rem;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.price {
+	font-size: 1.5rem;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.gallery {
+	display: flex;
+	gap: 10px;
+	overflow-x: auto;
+	margin-bottom: 20px;
+}
+
+.image {
+	width: 150px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.tabs {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+.tabs button {
+	padding: 8px 16px;
+	border: none;
+	background: #ddd;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.tabs button.active {
+	background: #333;
+	color: white;
+}
+
+.tabContent {
+	min-height: 200px;
+}
+
+.floorplan {
+	width: 100%;
+	max-width: 600px;
+	margin-top: 10px;
+}
+
+.map {
+	width: 100%;
+	height: 400px;
+	border: none;
+	border-radius: 8px;
+}

@@ -12,6 +12,7 @@ import Contacts from './pages/Contacts';
 import RegisterPage from './pages/Register';
 import LoginPage from './pages/Login';
 import HomePage from './pages';
+import HousePage from './pages/House';
 
 const router = createBrowserRouter([
 	{
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
 			{
 				path: 'login',
 				element: <LoginPage />,
+			},
+			{
+				path: 'house/:id',
+				element: <HousePage />,
 			},
 		],
 	},

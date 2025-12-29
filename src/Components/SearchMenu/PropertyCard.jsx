@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './PropertyCard.module.css';
 import { IoBed } from 'react-icons/io5';
 import { FaLocationDot } from 'react-icons/fa6';
@@ -35,9 +36,9 @@ const PropertyCard = ({ property }) => {
 						{property.price.toLocaleString()}
 					</p>
 				</div>
-				<a href={property.url} className={styles.view_button}>
+				<Link to={`/house/${property.id}`} className={styles.view_button}>
 					View Property Here!
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

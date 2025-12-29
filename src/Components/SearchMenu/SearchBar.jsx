@@ -24,13 +24,11 @@ const SearchBar = () => {
 	return (
 		<div>
 			<div className={styles.search_header}>
-				{/* PROPERTIES FOUND — LEFT */}
 				<p className={styles.properties_found}>
 					{filteredProperties.length} of {properties.length}{' '}
 					{properties.length === 1 ? 'property' : 'properties'} found
 				</p>
 
-				{/* SEARCH BAR — RIGHT */}
 				<div className={styles.search_input_wrapper}>
 					<div className={styles.search_input_row}>
 						<div className={styles.search_types}>
