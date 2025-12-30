@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './PropertyCard.module.css';
 import { IoBed } from 'react-icons/io5';
@@ -11,29 +11,41 @@ const lengthText = (text, maxLength) =>
 const PropertyCard = ({ property }) => {
 	return (
 		<div className={styles.property_card}>
-			<img src={property.picture} alt={property.type} className={styles.property_image} />
-			<div className={styles.card_content}>
-				<h3>{property.type}</h3>
-				<div className={styles.badges}>
-					<div className={styles.badges_wrapper}>
-						<span className={styles.tenure}>{property.tenure}</span>
-						<span className={styles.dateAdded}>
+			<div className={styles.image_container}>
+				<img
+					src={property.picture}
+					alt={property.type}
+					className={styles.property_image}
+				/>
+
+				<div className={styles.image_overlay}>
+					<div className={styles.image_top}>
+						<h3 className={styles.image_title}>{property.type}</h3>
+						<p className={styles.price_icon}>
+							<FaMoneyBillWave className={styles.icon} /> £
+							{property.price.toLocaleString()}
+						</p>
+					</div>
+
+					<div className={styles.image_bottom}>
+						<span className={styles.image_badge}>{property.tenure}</span>
+						<span className={styles.image_badge}>
 							Added: {property.added.day} {property.added.month}{' '}
 							{property.added.year}
 						</span>
 					</div>
 				</div>
-				<p className={styles.description}>{lengthText(property.description, 260)}</p>
+			</div>
+
+			<div className={styles.card_content}>
+				<p className={styles.description}>{lengthText(property.description, 200)}</p>
+
 				<div className={styles.card_details}>
 					<p>
 						<IoBed className={styles.icon} /> {property.bedrooms}
 					</p>
 					<p>
 						<FaLocationDot className={styles.icon} /> {property.location}
-					</p>
-					<p>
-						<FaMoneyBillWave className={styles.icon} /> £
-						{property.price.toLocaleString()}
 					</p>
 				</div>
 				<Link to={`/house/${property.id}`} className={styles.view_button}>
