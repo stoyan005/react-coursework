@@ -12,7 +12,6 @@ const HouseType = ({ property }) => {
 			<h3 className={styles.location}>{property.location}</h3>
 			<h2 className={styles.price}>£{property.price.toLocaleString()}</h2>
 
-			{/* Image Gallery */}
 			<div className={styles.gallery}>
 				{property.images?.map((img, idx) => (
 					<img
@@ -24,7 +23,6 @@ const HouseType = ({ property }) => {
 				))}
 			</div>
 
-			{/* Tabs */}
 			<div className={styles.tabs}>
 				<button
 					className={activeTab === 'description' ? styles.active : ''}

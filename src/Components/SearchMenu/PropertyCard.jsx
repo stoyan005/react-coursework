@@ -21,10 +21,6 @@ const PropertyCard = ({ property }) => {
 				<div className={styles.image_overlay}>
 					<div className={styles.image_top}>
 						<h3 className={styles.image_title}>{property.type}</h3>
-						<p className={styles.price_icon}>
-							<FaMoneyBillWave className={styles.icon} /> £
-							{property.price.toLocaleString()}
-						</p>
 					</div>
 
 					<div className={styles.image_bottom}>
@@ -42,10 +38,14 @@ const PropertyCard = ({ property }) => {
 
 				<div className={styles.card_details}>
 					<p>
-						<IoBed className={styles.icon} /> {property.bedrooms}
+						<IoBed className={styles.bed_icon} /> {property.bedrooms}
 					</p>
 					<p>
-						<FaLocationDot className={styles.icon} /> {property.location}
+						<FaLocationDot className={styles.location_icon} /> {property.location}
+					</p>
+					<p>
+						<FaMoneyBillWave className={styles.price_icon} /> £
+						{property.price.toLocaleString()}
 					</p>
 				</div>
 				<Link to={`/house/${property.id}`} className={styles.view_button}>

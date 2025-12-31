@@ -4,6 +4,7 @@
 	flex-direction: column;
 	background: #ffffff;
 	border-radius: 1rem;
+	max-width: 600px;
 	overflow: hidden;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 	transition: box-shadow 0.25s ease;
@@ -100,15 +101,19 @@
 	color: #0f172a;
 }
 
-.icon {
-	color: #2563eb;
+.bed_icon {
+	color: #cf0808;
+	font-size: 1.5rem;
+}
+
+.location_icon {
+	color: #0091ca;
 	font-size: 1.5rem;
 }
 
 .price_icon {
-	font-size: 0.9rem;
-	color: #64748b;
-	line-height: 1.5;
+	font-size: 1.5rem;
+	color: #007400;
 }
 
 .view_button {
