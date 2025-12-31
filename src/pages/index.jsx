@@ -1,4 +1,5 @@
 import React from 'react';
+import InfoCounter from '../Components/InfoCard/InfoCounter';
 import SearchMenu from '../Components/SearchMenu/SearchMenu';
 import Categories from '../Components/SearchMenu/Categories';
 import InfoCard from '../Components/InfoCard/InfoCard';
@@ -15,6 +16,9 @@ const HomePage = () => {
 			<SearchMenu />
 			<div>
 				<Categories />
+			</div>
+			<div>
+				<InfoCounter />
 			</div>
 			<div className="cards_container">
 				<InfoCard

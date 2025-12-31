@@ -1,0 +1,59 @@
+.info_counters {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: center;
+	padding: 1rem;
+	gap: 2rem;
+	background-color: #ffffff;
+}
+
+.box {
+	text-align: center;
+	border-radius: 15px;
+	padding: 3rem 1rem;
+}
+
+.number {
+	color: #eeae5b;
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.label {
+	font-size: 1.5rem;
+	color: #000000;
+}
+
+@media (max-width: 1200px) {
+	.info_counters {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.info_counters {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.box {
+		min-width: unset;
+		width: 100%;
+		padding: 2rem;
+	}
+
+	.number {
+		font-size: 2.25rem;
+	}
+
+	.label {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.info_counters {
+		grid-template-columns: 1fr;
+	}
+}
