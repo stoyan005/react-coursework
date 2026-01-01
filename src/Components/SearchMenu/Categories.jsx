@@ -22,7 +22,11 @@ const Categories = () => {
 	return (
 		<div className={styles.categories_section}>
 			{categories.map((item, index) => (
-				<div key={index} className={styles.category_card}>
+				<div
+					key={index}
+					className={styles.category_card}
+					style={{ animationDelay: `${index * 0.15}s` }}
+				>
 					<img src={item.img} alt={item.label} />
 					<p>{item.label}</p>
 				</div>

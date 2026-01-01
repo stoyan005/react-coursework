@@ -21,7 +21,7 @@
 
 .name p {
 	margin: 1rem 0;
-	color: #94a3b8;
+	color: #858585;
 }
 
 .footer_socials {
@@ -74,7 +74,7 @@
 
 .footer_links a {
 	display: block;
-	color: #94a3b8;
+	color: #858585;
 	text-decoration: none;
 	margin-bottom: 0.5rem;
 	transition: all 0.3s ease;
@@ -85,7 +85,7 @@
 }
 
 .footer_newsletter p {
-	color: #94a3b8;
+	color: #858585;
 	margin-bottom: 1rem;
 }
 
@@ -130,19 +130,19 @@
 	max-width: 1200px;
 	margin: auto;
 	font-size: 1rem;
-	color: #ffffff;
-	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	color: #858585;
+	border-top: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 .bottom_content a {
 	margin-left: 1rem;
-	color: #ffffff;
+	color: #858585;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
 
 .bottom_content a:hover {
-	color: #94a3b8;
+	color: #ffffff;
 }
 
 /* Responsive */

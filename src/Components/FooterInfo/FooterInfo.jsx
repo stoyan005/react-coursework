@@ -100,7 +100,7 @@ const FooterInfo = () => {
 			</div>
 
 			<div className={styles.bottom_content}>
-				<p>&copy; {new Date().getFullYear()} Elite Estates</p>
+				<p>&copy; {new Date().getFullYear()} Elite Estates. All Rights Reserved</p>
 				<div>
 					<a href="#">Privacy</a>
 					<a href="#">Terms & Conditions</a>

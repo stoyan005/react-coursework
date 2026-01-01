@@ -10,9 +10,23 @@
 	font-weight: 600;
 	transition: all 0.3s ease;
 	margin-top: 10px;
+	opacity: 0;
+	transition: all 0.3s ease;
+	animation: buttonLoad 0.5s ease-out forwards;
 }
 
 .search_here:hover {
-	color: #ffffff;
-	transform: translateY(-5px);
+	background: #ebb46d;
+	border: 2px solid #ebb46d;
+}
+
+@keyframes buttonLoad {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
