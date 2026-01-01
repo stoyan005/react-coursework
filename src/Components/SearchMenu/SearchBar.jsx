@@ -23,35 +23,36 @@ const SearchBar = () => {
 
 	return (
 		<div>
-			<div className={styles.search_header}>
-				<p className={styles.properties_found}>
-					{filteredProperties.length} of {properties.length}{' '}
-					{properties.length === 1 ? 'property' : 'properties'} found
-				</p>
+			<div className={styles.search_wrapper}>
+				<div className={styles.search_header}>
+					<div className={styles.search_input_wrapper}>
+						<div className={styles.search_input_row}>
+							<div className={styles.search_types}>
+								{['buy', 'rent', 'sold'].map((tab) => (
+									<button
+										key={tab}
+										className={`${styles.type_button} ${
+											activeTab === tab ? styles.active : ''
+										}`}
+										onClick={() => setActiveTab(tab)}
+									>
+										{tab.charAt(0).toUpperCase() + tab.slice(1)}
+									</button>
+								))}
+							</div>
 
-				<div className={styles.search_input_wrapper}>
-					<div className={styles.search_input_row}>
-						<div className={styles.search_types}>
-							{['buy', 'rent', 'sold'].map((tab) => (
-								<button
-									key={tab}
-									className={`${styles.type_button} ${
-										activeTab === tab ? styles.active : ''
-									}`}
-									onClick={() => setActiveTab(tab)}
-								>
-									{tab.charAt(0).toUpperCase() + tab.slice(1)}
-								</button>
-							))}
+							<input
+								className={styles.search_input}
+								type="text"
+								value={query}
+								onChange={(e) => setQuery(e.target.value)}
+								placeholder={`Search ${activeTab} properties...`}
+							/>
+							<p className={styles.properties_found}>
+								{filteredProperties.length} of {properties.length}{' '}
+								{properties.length === 1 ? 'property' : 'properties'} found
+							</p>
 						</div>
-
-						<input
-							className={styles.search_input}
-							type="text"
-							value={query}
-							onChange={(e) => setQuery(e.target.value)}
-							placeholder={`Search ${activeTab} properties...`}
-						/>
 					</div>
 				</div>
 			</div>

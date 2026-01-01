@@ -7,7 +7,7 @@ import home_video from '../../assets/photos/home_video.mp4';
 const SearchMenu = () => {
 	return (
 		<div className={styles.search_container}>
-			<div className={styles.search_bar}>
+			<div className={styles.search}>
 				<video
 					className={styles.search_video}
 					src={home_video}

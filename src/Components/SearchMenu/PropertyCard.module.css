@@ -4,7 +4,8 @@
 	flex-direction: column;
 	background: #ffffff;
 	border-radius: 1rem;
-	max-width: 600px;
+	width: 100%;
+	max-width: 100%;
 	overflow: hidden;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 	transition: box-shadow 0.25s ease;
