@@ -1,0 +1,146 @@
+.agents {
+	max-width: 1600px;
+	margin: 100px auto 50px;
+	padding: 2rem;
+}
+
+.agents_header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.agents_header h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: #000;
+}
+
+.agents_header p {
+	font-size: 1.25rem;
+	color: #000;
+	max-width: 1400px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+.agents_grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.agent_card {
+	display: flex;
+	align-items: center;
+	background: #ffffff;
+	border-radius: 20px;
+	padding: 2rem;
+	width: 100%;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+	transition: box-shadow 0.3s ease;
+}
+
+.agent_card:hover {
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.agent_avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 20px;
+	object-fit: cover;
+	margin-right: 1rem;
+	border: 3px solid #f0f0f0;
+}
+
+.agent_info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.agent_info h2 {
+	font-size: 1.25rem;
+	color: #000000;
+	margin-bottom: 1rem;
+}
+
+.agent_info h3 {
+	font-size: 1rem;
+	color: #000000;
+	margin-bottom: 1rem;
+}
+
+.agent_contact {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.agent_contact a {
+	font-size: 1rem;
+	color: #000000;
+	transition: color 0.3s ease;
+}
+
+.agent_contact a:hover {
+	color: #eeae5b;
+}
+
+@media (max-width: 1200px) {
+	.agents_grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.agent_card {
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 768px) {
+	.agents_grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.agent_card {
+		flex-direction: row;
+		max-width: 100%;
+		padding: 1.5rem;
+	}
+
+	.agent_avatar {
+		width: 90px;
+		height: 90px;
+		margin-right: 1rem;
+	}
+}
+
+/* Mobile: ~600px and below */
+@media (max-width: 600px) {
+	.agent_card {
+		flex-direction: column;
+		text-align: center;
+		padding: 1rem;
+	}
+
+	.agent_avatar {
+		margin-right: 0;
+		margin-bottom: 1rem;
+		width: 100px;
+		height: 100px;
+	}
+
+	.agent_info h2 {
+		font-size: 1.15rem;
+	}
+
+	.agent_info h3 {
+		font-size: 0.95rem;
+	}
+
+	.agents {
+		padding: 1rem;
+	}
+}
