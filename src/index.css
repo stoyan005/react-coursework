@@ -72,3 +72,42 @@ a {
 	text-align: center;
 	font-size: 2rem;
 }
+
+@media (max-width: 1024px) {
+	.property_grid {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		padding: 1rem 15px;
+	}
+
+	.saved_btn {
+		height: 38px;
+		padding: 0.45rem 1.2rem;
+		font-size: 0.95rem;
+	}
+
+	.property_not_found {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.property_grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		padding: 0.8rem 10px;
+	}
+
+	.saved_btn {
+		width: 100%;
+		margin-left: 0;
+		height: 36px;
+		padding: 0.4rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	.property_not_found {
+		font-size: 1.5rem;
+		padding: 0 1rem;
+	}
+}
