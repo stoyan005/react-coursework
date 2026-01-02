@@ -8,7 +8,7 @@
 			"tenure": "Freehold",
 			"description": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location": "Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture": "src/assets/photos/house.jpg",
+			"picture": "/images/house.jpg",
 			"added": {
 				"month": "October",
 				"day": 12,
@@ -23,7 +23,7 @@
 			"tenure": "Leasehold",
 			"description": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location": "Crofton Road, Orpington BR6",
-			"picture": "src/assets/photos/flat.jpg",
+			"picture": "/images/flat.jpg",
 			"added": {
 				"month": "September",
 				"day": 14,
@@ -38,7 +38,7 @@
 			"tenure": "Freehold",
 			"description": "Charming three bedroom detached bungalow set within a peaceful residential area of Chisington. The property offers a bright dual-aspect living room, a fitted kitchen/breakfast room, three generous bedrooms, and a modern shower room. Further benefits include a conservatory overlooking the rear garden, off-street parking, and a detached garage. Ideal for downsizers or families seeking single-storey living close to local shops and bus routes. ",
 			"location": "Apple Street, Chisington BR7",
-			"picture": "src/assets/photos/bungalow.jpg",
+			"picture": "/images/bungalow.jpg",
 			"added": {
 				"month": "April",
 				"day": 2,
@@ -53,7 +53,7 @@
 			"tenure": "Leasehold",
 			"description": "A stylish one bedroom apartment within a popular modern development, just moments from Shilington south station. The property features an open-plan kitchen/living space with integrated appliances, a private balcony, a spacious double bedroom, and a sleek bathroom. Residents also benefit from secure entry, a lift, and allocated parking. Ideal for professionals or investors.",
 			"location": "Bringdon Avenue, Shilington BR8",
-			"picture": "src/assets/photos/apartment.jpg",
+			"picture": "/images/apartment.jpg",
 			"added": {
 				"month": "January",
 				"day": 25,
@@ -68,7 +68,7 @@
 			"tenure": "Freehold",
 			"description": "Beautifully presented five-room semi-detached home offering a perfect blend of modern comfort and classic charm. The property features a bright and spacious living room with bay window, a separate dining room ideal for entertaining, and a contemporary fitted kitchen with integrated appliances. Upstairs there are three well-proportioned bedrooms and a stylish family bathroom.",
 			"location": "Primton Road, Bellington BR9",
-			"picture": "src/assets/photos/semi_detached.jpg",
+			"picture": "/images/semi_detached.jpg",
 			"added": {
 				"month": "December",
 				"day": 30,
@@ -83,7 +83,7 @@
 			"tenure": "Freehold",
 			"description": "A delightful two bedroom period cottage located in a sought-after semi-rural position on the edge of Goodsprings. The property has been sympathetically modernised while retaining its character, featuring a cosy living room with exposed beams, log burner, and a country-style kitchen. Upstairs there are two double bedrooms and a stylish bathroom. Outside is a pretty cottage garden and allocated parking. Close to local countryside walks and village pubs.",
 			"location": "Novac Street, Goodsprings BR3",
-			"picture": "src/assets/photos/cottage2.jpg",
+			"picture": "/images/cottage.jpg",
 			"added": {
 				"month": "August",
 				"day": 21,
@@ -98,7 +98,7 @@
 			"tenure": "Leasehold",
 			"description": "Attractive four bedroom terraced house blending period charm with contemporary updates located south of the 1926 Bromley Locomotive Museum. The ground floor features a bright reception room with feature fireplace, a separate dining area and a modern fitted kitchen opening onto a private paved rear garden — perfect for outside dining. On the first floor there are two double bedrooms and a single/study room, plus a stylish family bathroom with shower over bath. Further benefits include double glazing, gas central heating, excellent built-in storage and on-street permit parking. Conveniently located within easy reach of local shops, schools and transport links, this property is an ideal purchase for first-time buyers or growing families.",
 			"location": "Locomotive Road, Bromely BR2",
-			"picture": "src/assets/photos/terraced.jpg",
+			"picture": "/images/terraced.jpg",
 			"added": {
 				"month": "June",
 				"day": 8,
