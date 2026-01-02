@@ -57,7 +57,10 @@
 }
 
 .tabContent {
-	min-height: 200px;
+	min-height: 200px; /* optional */
+	max-height: none; /* make sure it can grow */
+	overflow: visible; /* allow content to expand */
+	width: 1000px;
 }
 
 .floorplan {
