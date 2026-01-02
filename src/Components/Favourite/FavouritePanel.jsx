@@ -5,7 +5,7 @@ import styles from './FavouritePanel.module.css';
 const FavouritePanel = ({ favourites, isOpen, onClose, toggleFavourite, clearFavourites }) => {
 	return (
 		<div className={`${styles.panel} ${isOpen ? styles.open : ''}`}>
-			{/* Header */}
+			{/* MAIN FAVOURITE MENU */}
 			<div className={styles.header}>
 				<h3>Favourited Properties ({favourites.length})</h3>
 
@@ -22,7 +22,7 @@ const FavouritePanel = ({ favourites, isOpen, onClose, toggleFavourite, clearFav
 				</div>
 			</div>
 
-			{/* Content */}
+			{/* FAVOURITE MENU CONTENT */}
 			{favourites.length === 0 ? (
 				<p className={styles.empty}>No favourited properties yet.</p>
 			) : (
