@@ -64,36 +64,46 @@
 	flex-shrink: 0;
 }
 
-.type_button {
-	padding: 14px 28px;
-	border: none;
-	border-radius: 5px;
+.search_types button {
+	padding: 0.75rem 1.5rem;
+	border-radius: 50px;
+	border: 1px solid #ddd;
+	background-color: #f9f9f9;
+	font-weight: 500;
 	cursor: pointer;
-	font-weight: 700;
-	font-size: 1rem;
-	background: #ffffff;
-	color: #111111;
 	transition: all 0.3s ease;
 }
 
-.type_button:hover {
-	background: #0099ff;
+.search_types button:hover {
+	background: #2b9de9;
 	color: #ffffff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.type_button.active {
-	background: #0099ff;
+.search_types button.active {
+	background-color: #2b9de9;
 	color: #ffffff;
-	box-shadow: 0 2px 4px rgba(0, 153, 255, 0.3);
+}
+
+.sort_dropdown {
+	padding: 0.5rem 1rem;
+	border-radius: 50px;
+	border: 2px solid #dddddd;
+	background-color: #f9f9f9;
+	cursor: pointer;
+	font-weight: 500;
+	transition: all 0.2s;
+}
+
+.sort_dropdown:hover {
+	background-color: #ecebf7;
 }
 
 /* ! PROPERTIES FOUND TEXT */
 .properties_found {
 	flex-shrink: 0;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-weight: 600;
-	color: #000000;
+	color: #555555;
 }
 
 /* ! PROPERTY GRID */
