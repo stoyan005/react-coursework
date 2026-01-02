@@ -1,0 +1,48 @@
+.panel {
+	position: fixed;
+	top: 20px; /* slightly below top */
+	right: -400px; /* start hidden off-screen */
+	width: 90%; /* same as your centered panel */
+	max-width: 400px; /* same max width */
+	background: #fff;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 1rem; /* keeps the rounded corners */
+	padding: 1rem; /* same padding */
+	z-index: 1000;
+	transition: right 0.3s ease-in-out; /* horizontal slide */
+	overflow-y: auto;
+	max-height: 80vh; /* same as centered version */
+}
+
+.panel.open {
+	right: 0px; /* slides into view from the right */
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.closeBtn {
+	background: transparent;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.item {
+	width: 100%;
+}
+
+.empty {
+	text-align: center;
+	color: #64748b;
+}

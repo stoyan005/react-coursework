@@ -5,7 +5,6 @@
 	background: #ffffff;
 	border-radius: 1rem;
 	width: 100%;
-	max-width: 100%;
 	overflow: hidden;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 	transition: box-shadow 0.25s ease;
@@ -42,7 +41,7 @@
 
 .image_top {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between; /* heart and title spaced apart */
 	align-items: center;
 }
 
@@ -74,12 +73,6 @@
 	flex-direction: column;
 	padding: 1.25rem;
 	gap: 1rem;
-}
-
-.badges {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .description {
@@ -133,8 +126,25 @@
 	background: #3b82f6;
 }
 
-@media (min-width: 768px) {
-	.property_card {
-		flex-direction: column;
-	}
+.heartBtn {
+	background: #fff;
+	border-radius: 50%;
+	padding: 4px;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative; /* ensures z-index works */
+	z-index: 10; /* makes button clickable over overlay */
+}
+
+.heartIcon {
+	color: #ccc;
+	transition: color 0.2s ease;
+}
+
+.heartIconActive {
+	color: red;
+	transition: color 0.2s ease;
 }
