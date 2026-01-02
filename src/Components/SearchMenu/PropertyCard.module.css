@@ -5,6 +5,7 @@
 	background: #ffffff;
 	border-radius: 1rem;
 	width: 100%;
+	max-width: 600px;
 	overflow: hidden;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 	transition: box-shadow 0.25s ease;
@@ -41,7 +42,7 @@
 
 .image_top {
 	display: flex;
-	justify-content: space-between; /* heart and title spaced apart */
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -127,20 +128,20 @@
 }
 
 .heartBtn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: #fff;
 	border-radius: 50%;
 	padding: 4px;
 	border: none;
 	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative; /* ensures z-index works */
-	z-index: 10; /* makes button clickable over overlay */
+	z-index: 10;
 }
 
 .heartIcon {
-	color: #ccc;
+	color: #000000;
 	transition: color 0.2s ease;
 }
 

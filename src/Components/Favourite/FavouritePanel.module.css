@@ -1,21 +1,21 @@
 .panel {
 	position: fixed;
-	top: 20px; /* slightly below top */
-	right: -400px; /* start hidden off-screen */
-	width: 90%; /* same as your centered panel */
-	max-width: 400px; /* same max width */
-	background: #fff;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	border-radius: 1rem; /* keeps the rounded corners */
-	padding: 1rem; /* same padding */
+	top: 20px;
+	right: -400px;
+	width: 90%;
+	max-width: 400px;
+	max-height: 80vh;
+	background: #ffffff;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	border-radius: 1rem;
+	padding: 1rem;
 	z-index: 1000;
-	transition: right 0.3s ease-in-out; /* horizontal slide */
 	overflow-y: auto;
-	max-height: 80vh; /* same as centered version */
+	transition: right 0.3s ease-in-out;
 }
 
 .panel.open {
-	right: 0px; /* slides into view from the right */
+	right: 0px;
 }
 
 .header {
@@ -25,8 +25,8 @@
 	margin-bottom: 1rem;
 }
 
-.closeBtn {
-	background: transparent;
+.close_button {
+	background-color: transparent;
 	border: none;
 	font-size: 1.2rem;
 	cursor: pointer;
@@ -44,5 +44,5 @@
 
 .empty {
 	text-align: center;
-	color: #64748b;
+	color: #64758b;
 }

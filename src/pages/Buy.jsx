@@ -7,9 +7,9 @@ import FavouritePanel from '../Components/Favourite/FavouritePanel';
 const BuyPage = () => {
 	const [favourites, setFavourites] = useState([]);
 	const [showFavourites, setShowFavourites] = useState(false);
+	const [filteredProperties, setFilteredProperties] = useState(propertiesData.properties);
 
 	const toggleFavourite = (property) => {
-		console.log('Toggling favourite:', property.id); // Debug log
 		setFavourites((prev) =>
 			prev.some((p) => p.id === property.id)
 				? prev.filter((p) => p.id !== property.id)
@@ -18,25 +18,24 @@ const BuyPage = () => {
 	};
 
 	return (
-		<div style={{ padding: '1rem' }}>
-			<SearchBar />
+		<div className="buypage_container">
+			{/* PROPERTY FAVOURITED BUTTON */}
+			<div className="navbar_container">
+				<SearchBar
+					properties={propertiesData.properties}
+					onFilter={setFilteredProperties}
+					extraComponent={
+						<button
+							className="saved_btn"
+							onClick={() => setShowFavourites((prev) => !prev)}
+						>
+							Favourited ({favourites.length})
+						</button>
+					}
+				/>
+			</div>
 
-			<button
-				onClick={() => setShowFavourites((prev) => !prev)}
-				style={{
-					margin: '1rem 0',
-					padding: '0.5rem 1rem',
-					borderRadius: '0.5rem',
-					background: '#2563eb',
-					color: '#fff',
-					fontWeight: '500',
-					cursor: 'pointer',
-				}}
-			>
-				Saved ({favourites.length})
-			</button>
-
-			{/* Favourite panel */}
+			{/* FAVOURITE PANEL */}
 			<FavouritePanel
 				favourites={favourites}
 				isOpen={showFavourites}
@@ -44,22 +43,22 @@ const BuyPage = () => {
 				toggleFavourite={toggleFavourite}
 			/>
 
-			{/* Property grid */}
-			<div
-				style={{
-					display: 'grid',
-					gap: '2rem',
-					gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-				}}
-			>
-				{propertiesData.properties.map((property) => (
-					<PropertyCard
-						key={property.id}
-						property={property}
-						isFavourite={favourites.some((p) => p.id === property.id)}
-						onToggleFavourite={toggleFavourite}
-					/>
-				))}
+			{/* PROPERTY GRID */}
+			<div className="property_grid">
+				{filteredProperties.length === 0 ? (
+					<div className="property_not_found">
+						<p>No properties found.</p>
+					</div>
+				) : (
+					filteredProperties.map((property) => (
+						<PropertyCard
+							key={property.id}
+							property={property}
+							isFavourite={favourites.some((p) => p.id === property.id)}
+							onToggleFavourite={toggleFavourite}
+						/>
+					))
+				)}
 			</div>
 		</div>
 	);

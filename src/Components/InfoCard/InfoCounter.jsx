@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './InfoCounter.module.css';
 
-const CounterBox = ({ end, label, suffix = '', duration = 2000 }) => {
+const CounterBox = ({ end, label, suffix = '', duration = 5000 }) => {
 	const [count, setCount] = useState(0);
 
 	useEffect(() => {

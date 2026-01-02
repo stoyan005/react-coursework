@@ -1,9 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import data from '../../../properties/properties.json';
-import PropertyCard from './PropertyCard';
 import styles from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = ({ onFilter, extraComponent }) => {
 	const [query, setQuery] = useState('');
 	const [activeTab, setActiveTab] = useState('buy');
 
@@ -11,15 +10,17 @@ const SearchBar = () => {
 
 	const filteredProperties = useMemo(() => {
 		const searchValue = query.toLowerCase();
-
-		return properties.filter((property) => {
-			return (
+		return properties.filter(
+			(property) =>
 				property.type.toLowerCase().includes(searchValue) ||
 				property.location.toLowerCase().includes(searchValue) ||
 				property.description.toLowerCase().includes(searchValue)
-			);
-		});
+		);
 	}, [query, properties]);
+
+	useMemo(() => {
+		onFilter(filteredProperties);
+	}, [filteredProperties, onFilter]);
 
 	return (
 		<div>
@@ -41,6 +42,7 @@ const SearchBar = () => {
 								))}
 							</div>
 
+							{/* SEARCH INPUT */}
 							<input
 								className={styles.search_input}
 								type="text"
@@ -48,23 +50,15 @@ const SearchBar = () => {
 								onChange={(e) => setQuery(e.target.value)}
 								placeholder={`Search ${activeTab} properties...`}
 							/>
+
 							<p className={styles.properties_found}>
 								{filteredProperties.length} of {properties.length}{' '}
 								{properties.length === 1 ? 'property' : 'properties'} found
 							</p>
+							{extraComponent}
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div className={styles.properties_list}>
-				{filteredProperties.length === 0 ? (
-					<p>No properties found.</p>
-				) : (
-					filteredProperties.map((property) => (
-						<PropertyCard key={property.id} property={property} />
-					))
-				)}
 			</div>
 		</div>
 	);

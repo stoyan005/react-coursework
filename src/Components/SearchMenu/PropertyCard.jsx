@@ -22,8 +22,6 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 				<div className={styles.image_overlay}>
 					<div className={styles.image_top}>
 						<h3 className={styles.image_title}>{property.type}</h3>
-
-						{/* Heart button */}
 						<button
 							className={styles.heartBtn}
 							onClick={(e) => {
