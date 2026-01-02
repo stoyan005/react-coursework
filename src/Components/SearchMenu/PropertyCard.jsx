@@ -10,8 +10,13 @@ const lengthText = (text, maxLength) =>
 	text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
 
 const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
+	const handleDragStart = (e) => {
+		e.dataTransfer.setData('application/property', JSON.stringify(property));
+		e.dataTransfer.effectAllowed = 'move';
+	};
+
 	return (
-		<div className={styles.property_card}>
+		<div className={styles.property_card} draggable onDragStart={handleDragStart}>
 			<div className={styles.image_container}>
 				<img
 					src={property.picture}
@@ -22,6 +27,8 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 				<div className={styles.image_overlay}>
 					<div className={styles.image_top}>
 						<h3 className={styles.image_title}>{property.type}</h3>
+
+						{/* Heart button */}
 						<button
 							className={styles.heartBtn}
 							onClick={(e) => {

@@ -43,7 +43,7 @@ a {
 .property_grid {
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	width: 100%;
 	padding: 1rem 20px;
 	box-sizing: border-box;
@@ -65,7 +65,7 @@ a {
 }
 
 .saved_btn:hover {
-	background: #003ec4;
+	background: #c40000;
 }
 
 .property_not_found {
