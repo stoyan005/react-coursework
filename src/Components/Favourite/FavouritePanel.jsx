@@ -2,16 +2,27 @@ import React from 'react';
 import PropertyCard from '../SearchMenu/PropertyCard';
 import styles from './FavouritePanel.module.css';
 
-const FavouritePanel = ({ favourites = [], isOpen = false, onClose, toggleFavourite }) => {
+const FavouritePanel = ({ favourites, isOpen, onClose, toggleFavourite, clearFavourites }) => {
 	return (
 		<div className={`${styles.panel} ${isOpen ? styles.open : ''}`}>
+			{/* Header */}
 			<div className={styles.header}>
 				<h3>Favourited Properties ({favourites.length})</h3>
-				<button onClick={onClose} className={styles.close_button}>
-					✕
-				</button>
+
+				<div className={styles.header_buttons}>
+					{favourites.length > 0 && (
+						<button className={styles.clear_button} onClick={clearFavourites}>
+							Clear all
+						</button>
+					)}
+
+					<button onClick={onClose} className={styles.close_button}>
+						✕
+					</button>
+				</div>
 			</div>
 
+			{/* Content */}
 			{favourites.length === 0 ? (
 				<p className={styles.empty}>No favourited properties yet.</p>
 			) : (

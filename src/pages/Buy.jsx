@@ -17,6 +17,10 @@ const BuyPage = () => {
 		);
 	};
 
+	const clearFavourites = () => {
+		setFavourites([]);
+	};
+
 	return (
 		<div className="buypage_container">
 			{/* PROPERTY FAVOURITED BUTTON */}
@@ -41,6 +45,7 @@ const BuyPage = () => {
 				isOpen={showFavourites}
 				onClose={() => setShowFavourites(false)}
 				toggleFavourite={toggleFavourite}
+				clearFavourites={clearFavourites}
 			/>
 
 			{/* PROPERTY GRID */}

@@ -46,3 +46,30 @@
 	text-align: center;
 	color: #64758b;
 }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header_buttons {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.clear_button {
+	background: #e73838;
+	color: #ffffff;
+	padding: 0.5rem 0.7rem;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1rem;
+	border: none;
+	transition: all 0.3s ease;
+}
+
+.clear_button:hover {
+	background: #d60808;
+}
