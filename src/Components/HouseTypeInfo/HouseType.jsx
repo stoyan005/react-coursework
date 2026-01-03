@@ -1,114 +1,157 @@
 import React, { useState } from 'react';
+import {
+	FaBed,
+	FaBath,
+	FaRulerCombined,
+	FaCar,
+	FaMapMarkerAlt,
+	FaExpand,
+	FaThList,
+	FaMap,
+} from 'react-icons/fa';
 import styles from './HouseType.module.css';
-import { FaBed, FaBath, FaRulerCombined, FaCar } from 'react-icons/fa';
 
 const HouseType = ({ property }) => {
 	const [activeTab, setActiveTab] = useState('description');
 	const [activeImage, setActiveImage] = useState(0);
 
-	if (!property) return <p>Property not found</p>;
+	if (!property) return <div className={styles.loading_text}>Loading the good stuff...</div>;
 
 	return (
-		<div className={styles.page}>
-			{/* HEADER WITH PRICE CARD AND LOCATION NAME */}
-			<header className={styles.header}>
-				<div className={styles.header_info}>
-					<h1 className={styles.title}>{property.type}</h1>
-					<p className={styles.location}>{property.location}</p>
-				</div>
-
-				<div className={styles.price_card}>
-					<span className={styles.price_label}>Price</span>
-					<span className={styles.price_value}>
-						£{property.price.toLocaleString()}
-					</span>
-				</div>
-			</header>
-
-			{/* INFORMATION CARDS */}
-			<div className={styles.info_cards}>
-				<div className={styles.card}>
-					<FaRulerCombined className={styles.icon} />
-					<span>{property.squareFeet} sqft</span>
-				</div>
-				<div className={styles.card}>
-					<FaBed className={styles.icon} />
-					<span>{property.bedrooms} Bedrooms</span>
-				</div>
-				<div className={styles.card}>
-					<FaBath className={styles.icon} />
-					<span>{property.bathrooms} Bathrooms</span>
-				</div>
-				{property.parking && (
-					<div className={styles.card}>
-						<FaCar className={styles.icon} />
-						<span>Parking: {property.parking}</span>
+		<div className={styles.page_wrap}>
+			{/* LEFT SIDE: IMAGE GALLERY */}
+			<section className={styles.image_side}>
+				<div className={styles.big_image}>
+					<img src={property.images?.[activeImage]} alt="Property" />
+					<div className={styles.image_count}>
+						{activeImage + 1} / {property.images?.length}
 					</div>
-				)}
-			</div>
+				</div>
 
-			{/* GALLERY WITH 8 PHOTOS */}
-			<div className={styles.gallery}>
-				<img
-					src={property.images?.[activeImage]}
-					alt="Main property view"
-					className={styles.mainImage}
-				/>
-
-				<div className={styles.thumbnails}>
+				<div className={styles.thumb_row}>
 					{property.images?.map((img, idx) => (
-						<img
+						<div
 							key={idx}
-							src={img}
-							alt={`Thumbnail ${idx + 1}`}
-							className={`${styles.photo} ${
-								idx === activeImage ? styles.active_photo : ''
+							className={`${styles.thumb_item} ${
+								idx === activeImage ? styles.thumb_active : ''
 							}`}
 							onClick={() => setActiveImage(idx)}
-						/>
+						>
+							<img src={img} alt="" />
+						</div>
 					))}
 				</div>
-			</div>
+			</section>
 
-			{/* TABS FOR DESCRIPTION, FLOORPLAN, MAP */}
-			<nav className={styles.tabs}>
-				{['description', 'floorplan', 'map'].map((tab) => (
-					<button
-						key={tab}
-						className={activeTab === tab ? styles.activeTab : ''}
-						onClick={() => setActiveTab(tab)}
-					>
-						{tab.charAt(0).toUpperCase() + tab.slice(1)}
-					</button>
-				))}
-			</nav>
+			{/* RIGHT SIDE: DETAILS PANEL */}
+			<aside className={styles.info_side}>
+				<header className={styles.info_header}>
+					<div className={styles.badge}>Hot Listing</div>
+					<h1 className={styles.house_title}>{property.type}</h1>
+					<p className={styles.house_location}>
+						<FaMapMarkerAlt /> {property.location}
+					</p>
+					<div className={styles.house_price}>
+						£{property.price?.toLocaleString()}
+					</div>
+				</header>
 
-			{/* CONTENT INSIDE THE TABS */}
-			<div className={styles.content}>
-				{activeTab === 'description' && (
-					<div
-						className={styles.description}
-						dangerouslySetInnerHTML={{ __html: property.description }}
-					/>
-				)}
+				{/* STATS */}
+				<div className={styles.stats_grid}>
+					<div className={styles.stat_card}>
+						<FaRulerCombined />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>{property.squareFeet}</span>
+							<span className={styles.stat_label}>sqft</span>
+						</div>
+					</div>
 
-				{activeTab === 'floorplan' && (
-					<img
-						src={property.floorplan}
-						alt="Floor plan"
-						className={styles.floorplan}
-					/>
-				)}
+					<div className={styles.stat_card}>
+						<FaBed />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>{property.bedrooms}</span>
+							<span className={styles.stat_label}>beds</span>
+						</div>
+					</div>
 
-				{activeTab === 'map' && (
-					<iframe
-						src={property.mapUrl}
-						title="Google Map"
-						className={styles.map}
-						allowFullScreen
-					/>
-				)}
-			</div>
+					<div className={styles.stat_card}>
+						<FaBath />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>{property.bathrooms}</span>
+							<span className={styles.stat_label}>baths</span>
+						</div>
+					</div>
+
+					<div className={styles.stat_card}>
+						<FaCar />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>
+								{property.parking || 'N/A'}
+							</span>
+							<span className={styles.stat_label}>parking</span>
+						</div>
+					</div>
+				</div>
+
+				{/* TABS */}
+				<div className={styles.tabs_wrap}>
+					<nav className={styles.tabs}>
+						<button
+							className={activeTab === 'description' ? styles.tab_active : ''}
+							onClick={() => setActiveTab('description')}
+						>
+							<FaThList /> Details
+						</button>
+
+						<button
+							className={activeTab === 'floorplan' ? styles.tab_active : ''}
+							onClick={() => setActiveTab('floorplan')}
+						>
+							<FaExpand /> Floor Plan
+						</button>
+
+						<button
+							className={activeTab === 'map' ? styles.tab_active : ''}
+							onClick={() => setActiveTab('map')}
+						>
+							<FaMap /> Map
+						</button>
+					</nav>
+
+					<div className={styles.tab_content}>
+						{activeTab === 'description' && (
+							<div
+								className={styles.fade}
+								dangerouslySetInnerHTML={{ __html: property.description }}
+							/>
+						)}
+
+						{activeTab === 'floorplan' && (
+							<div className={styles.fade}>
+								<img
+									src={property.floorplan}
+									className={styles.floorplan}
+									alt="Floorplan"
+								/>
+							</div>
+						)}
+
+						{activeTab === 'map' && (
+							<iframe
+								src={property.mapUrl}
+								className={styles.map}
+								title="Location"
+								allowFullScreen
+							/>
+						)}
+					</div>
+				</div>
+
+				<footer className={styles.action_bar}>
+					<button className={styles.btn_primary}>Book a Viewing</button>
+					<button className={styles.btn_secondary}>Get Brochure</button>
+				</footer>
+			</aside>
 		</div>
 	);
 };

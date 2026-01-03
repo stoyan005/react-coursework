@@ -1,9 +1,10 @@
 import React from 'react';
+import WhyChooseUs from '../Components/WhyChooseUs/WhyChooseUs.jsx';
 
 const AboutPage = () => {
 	return (
 		<>
-			<h1>This is the about page</h1>
+			<WhyChooseUs />
 		</>
 	);
 };
