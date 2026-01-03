@@ -176,7 +176,13 @@
 	color: #2ecc71;
 }
 
-.view_button {
+.button_container {
+	display: flex; /* Align children in a row */
+	gap: 10px; /* Space between buttons */
+}
+
+.view_button,
+.contact_button {
 	text-align: center;
 	background: #1a1a1a;
 	color: #ffffff;
@@ -186,8 +192,10 @@
 	border-radius: 10px;
 	text-decoration: none;
 	transition: background 0.3s ease;
+	width: 300px;
 }
 
-.view_button:hover {
+.view_button:hover,
+.contact_button:hover {
 	background-color: #444444;
 }

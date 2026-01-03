@@ -75,9 +75,14 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 					</p>
 				</div>
 
-				<Link to={`/house/${property.id}`} className={styles.view_button}>
-					View Property Here!
-				</Link>
+				<div className={styles.button_container}>
+					<Link to={`/house/${property.id}`} className={styles.view_button}>
+						View Property Here!
+					</Link>
+					<Link to={`/contacts`} className={styles.contact_button}>
+						Contact For Property!
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
