@@ -48,6 +48,7 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 						</button>
 					</div>
 
+					{/* INFORMATION BADGES */}
 					<div className={styles.image_bottom}>
 						<span className={styles.image_badge}>{property.tenure}</span>
 						<span className={styles.image_badge}>
