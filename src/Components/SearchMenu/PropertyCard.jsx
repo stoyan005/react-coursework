@@ -28,9 +28,9 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 					<div className={styles.image_top}>
 						<h3 className={styles.image_title}>{property.type}</h3>
 
-						{/* Heart button */}
+						{/* FAVOURITE BUTTON */}
 						<button
-							className={styles.heartBtn}
+							className={styles.heart_button}
 							onClick={(e) => {
 								e.preventDefault();
 								e.stopPropagation();
@@ -38,9 +38,12 @@ const PropertyCard = ({ property, isFavourite, onToggleFavourite }) => {
 							}}
 						>
 							{isFavourite ? (
-								<AiFillHeart className={styles.heartIconActive} size={26} />
+								<AiFillHeart
+									className={styles.heart_icon_active}
+									size={26}
+								/>
 							) : (
-								<AiOutlineHeart className={styles.heartIcon} size={26} />
+								<AiOutlineHeart className={styles.heart_icon} size={26} />
 							)}
 						</button>
 					</div>

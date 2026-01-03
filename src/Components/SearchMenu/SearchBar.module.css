@@ -85,17 +85,23 @@
 }
 
 .sort_dropdown {
-	padding: 0rem 1rem;
+	padding: 0.5rem 1rem;
 	border-radius: 50px;
 	border: 2px solid #dddddd;
 	background-color: #f9f9f9;
 	cursor: pointer;
 	font-weight: 500;
-	transition: all 0.2s;
+	transition: all 0.3s;
 }
 
 .sort_dropdown:hover {
-	background-color: #ecebf7;
+	background-color: #eeeeee;
+}
+
+.sort_dropdown:focus {
+	outline: none;
+	border-color: #666666;
+	transition: all 0.3s ease;
 }
 
 /* ! PROPERTIES FOUND TEXT */

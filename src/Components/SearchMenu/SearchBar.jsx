@@ -99,7 +99,7 @@ const SearchBar = ({ onFilter, extraComponent }) => {
 								placeholder={`Search ${activeTab} properties...`}
 							/>
 
-							{/* SINGLE SORT DROPDOWN */}
+							{/* SORT DROPDOWN MENU */}
 							<select
 								className={styles.sort_dropdown}
 								value={sortBy}

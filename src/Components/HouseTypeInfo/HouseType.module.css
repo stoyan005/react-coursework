@@ -4,20 +4,18 @@
 	margin: 120px auto 60px;
 	padding: 0 15px;
 	box-sizing: border-box;
-	font-family: system-ui, sans-serif;
 }
 
-/* Header */
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	gap: 10px;
 }
 
-.headerInfo {
+.header_info {
 	flex: 1 1 auto;
 	min-width: 0;
 }
@@ -25,79 +23,77 @@
 .title {
 	font-size: 2rem;
 	font-weight: 700;
-	margin-bottom: 4px;
-	word-break: break-word;
+	margin-bottom: 10px;
 }
 
 .location {
-	color: #666;
-	font-size: 1rem;
-	word-break: break-word;
+	color: #666666;
+	font-size: 1.35rem;
+	font-weight: 700;
 }
 
-/* Price Card */
-.priceCard {
-	background: #e6f4ea;
-	padding: 16px 20px;
-	border-left: 4px solid #34a853;
-	border-radius: 8px;
+.price_card {
+	flex-shrink: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	background: #e6e8f4;
+	padding: 15px 20px;
+	border-left: 4px solid #347ea8;
+	border-radius: 8px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-	flex-shrink: 0;
 }
 
-.priceLabel {
-	font-size: 0.85rem;
+.price_label {
+	font-size: 1rem;
 	font-weight: 500;
 	color: #4a4a4a;
 	text-transform: uppercase;
-	margin-bottom: 4px;
-	letter-spacing: 0.5px;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
 }
 
-.priceValue {
-	font-size: 1.6rem;
+.price_value {
+	font-size: 1.75rem;
 	font-weight: 700;
-	color: #1b5e20;
+	color: #347ea8;
 }
 
-.infoCards {
+.info_cards {
 	display: flex;
-	gap: 12px;
 	flex-wrap: wrap;
 	margin-bottom: 20px;
+	gap: 20px;
 }
 
 .card {
+	flex: 1 1 120px;
 	display: flex;
 	align-items: center;
 	background: #f7f7f7;
-	padding: 10px 15px;
-	border-radius: 8px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-	font-weight: 600;
+	max-width: 180px;
+	padding: 15px 15px;
+	border-radius: 10px;
 	color: #333;
-	font-size: 1rem;
-	flex: 1 1 120px;
-	max-width: 150px;
+	font-weight: 600;
+	font-size: 1.2rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .icon {
-	margin-right: 6px;
-	color: #34a853;
+	margin-right: 10px;
+	color: #347ea8;
 	font-size: 1.1rem;
 }
 
 .gallery {
 	background: #ffffff;
-	border-radius: 12px;
-	padding: 10px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	padding: 20px;
 	margin-bottom: 20px;
 	width: 100%;
 	box-sizing: border-box;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .mainImage {
@@ -110,46 +106,46 @@
 
 .thumbnails {
 	display: flex;
-	gap: 8px;
-	margin-top: 10px;
+	gap: 10px;
+	margin-top: 30px;
 	overflow-x: auto;
 	padding-bottom: 5px;
 }
 
-.thumb {
+.photo {
 	flex: 0 0 auto;
-	width: 80px;
+	width: 100px;
 	height: 55px;
 	object-fit: cover;
 	border-radius: 5px;
 	cursor: pointer;
 	opacity: 0.7;
 	transition: 0.3s;
+	border: 2px solid #cccccc;
 }
 
-.thumb:hover,
-.activeThumb {
+.photo:hover,
+.active_photo {
 	opacity: 1;
-	border: 2px solid #34a853;
+	border: 2px solid #347ea8;
 }
 
-/* Tabs */
 .tabs {
-	display: flex;
-	gap: 12px;
-	border-bottom: 2px solid #eee;
-	margin-bottom: 20px;
 	flex-wrap: wrap;
+	display: flex;
+	gap: 50px;
+	border-bottom: 2px solid #eeeeee;
+	margin-bottom: 30px;
 }
 
 .tabs button {
+	position: relative;
 	background: none;
 	border: none;
-	padding: 8px 0;
-	font-size: 0.95rem;
+	padding: 10px 0;
+	font-size: 1rem;
 	cursor: pointer;
-	color: #666;
-	position: relative;
+	color: #000000;
 }
 
 .activeTab {
@@ -164,30 +160,30 @@
 	left: 0;
 	width: 100%;
 	height: 3px;
-	background: #34a853;
+	background: #347ea8;
 }
 
 .content {
-	background: #fff;
+	background: #ffffff;
 	border-radius: 12px;
-	padding: 20px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+	padding: 30px;
 	width: 100%;
 	box-sizing: border-box;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
 .description {
-	line-height: 1.6;
-	color: #444;
+	line-height: 2;
+	color: #444444;
 }
 
 .floorplan,
 .map {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	border-radius: 10px;
 	display: block;
+	width: 100%;
+	max-width: 1000px;
+	height: 700px;
+	border-radius: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -206,7 +202,7 @@
 		align-items: flex-start;
 	}
 
-	.priceCard {
+	.price_card {
 		width: 100%;
 		align-items: flex-start;
 		margin-top: 10px;
@@ -221,29 +217,15 @@
 		max-height: 220px;
 	}
 
-	.infoCards {
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-
 	.tabs button {
 		font-size: 0.9rem;
 	}
 }
 
 @media (max-width: 480px) {
-	.title {
-		font-size: 1.6rem;
-	}
-
-	.priceValue {
-		font-size: 1.4rem;
-	}
-
-	.infoCards {
+	.info_cards {
 		flex-direction: column;
-		gap: 8px;
+		gap: 10px;
 	}
 
 	.mainImage {
@@ -256,6 +238,6 @@
 	}
 
 	.tabs button {
-		font-size: 0.85rem;
+		font-size: 1rem;
 	}
 }

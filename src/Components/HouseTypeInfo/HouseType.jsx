@@ -10,45 +10,45 @@ const HouseType = ({ property }) => {
 
 	return (
 		<div className={styles.page}>
-			{/* Header */}
+			{/* HEADER WITH PRICE CARD AND LOCATION NAME */}
 			<header className={styles.header}>
-				<div className={styles.headerInfo}>
+				<div className={styles.header_info}>
 					<h1 className={styles.title}>{property.type}</h1>
 					<p className={styles.location}>{property.location}</p>
 				</div>
 
-				<div className={styles.priceCard}>
-					<span className={styles.priceLabel}>Price</span>
-					<span className={styles.priceValue}>
+				<div className={styles.price_card}>
+					<span className={styles.price_label}>Price</span>
+					<span className={styles.price_value}>
 						£{property.price.toLocaleString()}
 					</span>
 				</div>
 			</header>
 
-			{/* Info Cards */}
-			<section className={styles.infoCards}>
+			{/* INFORMATION CARDS */}
+			<div className={styles.info_cards}>
 				<div className={styles.card}>
 					<FaRulerCombined className={styles.icon} />
 					<span>{property.squareFeet} sqft</span>
 				</div>
 				<div className={styles.card}>
 					<FaBed className={styles.icon} />
-					<span>{property.bedrooms} Beds</span>
+					<span>{property.bedrooms} Bedrooms</span>
 				</div>
 				<div className={styles.card}>
 					<FaBath className={styles.icon} />
-					<span>{property.bathrooms} Baths</span>
+					<span>{property.bathrooms} Bathrooms</span>
 				</div>
 				{property.parking && (
 					<div className={styles.card}>
 						<FaCar className={styles.icon} />
-						<span>{property.parking} Parking</span>
+						<span>Parking: {property.parking}</span>
 					</div>
 				)}
-			</section>
+			</div>
 
-			{/* Gallery */}
-			<section className={styles.gallery}>
+			{/* GALLERY WITH 8 PHOTOS */}
+			<div className={styles.gallery}>
 				<img
 					src={property.images?.[activeImage]}
 					alt="Main property view"
@@ -61,16 +61,16 @@ const HouseType = ({ property }) => {
 							key={idx}
 							src={img}
 							alt={`Thumbnail ${idx + 1}`}
-							className={`${styles.thumb} ${
-								idx === activeImage ? styles.activeThumb : ''
+							className={`${styles.photo} ${
+								idx === activeImage ? styles.active_photo : ''
 							}`}
 							onClick={() => setActiveImage(idx)}
 						/>
 					))}
 				</div>
-			</section>
+			</div>
 
-			{/* Tabs */}
+			{/* TABS FOR DESCRIPTION, FLOORPLAN, MAP */}
 			<nav className={styles.tabs}>
 				{['description', 'floorplan', 'map'].map((tab) => (
 					<button
@@ -83,8 +83,8 @@ const HouseType = ({ property }) => {
 				))}
 			</nav>
 
-			{/* Content */}
-			<section className={styles.content}>
+			{/* CONTENT INSIDE THE TABS */}
+			<div className={styles.content}>
 				{activeTab === 'description' && (
 					<div
 						className={styles.description}
@@ -108,7 +108,7 @@ const HouseType = ({ property }) => {
 						allowFullScreen
 					/>
 				)}
-			</section>
+			</div>
 		</div>
 	);
 };
