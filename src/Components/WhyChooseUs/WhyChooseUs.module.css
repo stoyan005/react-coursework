@@ -33,6 +33,7 @@
 	display: flex;
 	align-items: center;
 	gap: 60px;
+	width: 1500px;
 }
 
 .reverse {
@@ -42,8 +43,8 @@
 .image_placeholder {
 	flex: 1;
 	height: 400px;
-	background-color: #eeeeee;
 	border: 5px;
+	background-color: #eeeeee;
 	overflow: hidden;
 }
 
@@ -60,7 +61,7 @@
 
 .text {
 	flex: 1;
-	max-width: 450px;
+	max-width: 600px;
 }
 
 .text h4 {
