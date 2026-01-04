@@ -62,9 +62,11 @@ const Navbar = () => {
 								<Link to="/contacts" onClick={() => setOpen(false)}>
 									Contact Us
 								</Link>
-								<Link to="/register" onClick={() => setOpen(false)}>
-									<RegisterBtn />
-								</Link>
+								<div className={styles.register_button}>
+									<Link to="/register" onClick={() => setOpen(false)}>
+										Register
+									</Link>
+								</div>
 							</div>
 						)}
 					</div>

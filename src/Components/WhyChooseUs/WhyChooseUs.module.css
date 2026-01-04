@@ -1,9 +1,11 @@
+/* ! WHY CHOOSE US CONTAINER */
 .container {
-	padding: 100px;
+	padding: 120px;
 	background-color: #fafafa;
 	color: #333333;
 }
 
+/* ! TITLE AND INTRODUCTION */
 .about_intro {
 	max-width: 800px;
 	margin-bottom: 80px;
@@ -23,6 +25,7 @@
 	color: #666666;
 }
 
+/* ! THREE LIST CONTAINERS */
 .feature_list {
 	display: flex;
 	flex-direction: column;
@@ -40,6 +43,7 @@
 	flex-direction: row-reverse;
 }
 
+/* ! IMAGE PLACEHOLDERS */
 .image_placeholder {
 	flex: 1;
 	height: 400px;
@@ -76,12 +80,25 @@
 	color: #555555;
 }
 
+/* ! RESPONSIVENESS */
+@media (max-width: 1200px) {
+	.item {
+		width: 100%;
+		gap: 40px;
+	}
+
+	.image_placeholder {
+		height: 350px;
+	}
+}
+
 @media (max-width: 900px) {
 	.item,
 	.reverse {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 30px;
+		width: 100%;
 	}
 
 	.image_placeholder {
@@ -89,7 +106,25 @@
 		height: 300px;
 	}
 
-	.title {
+	.text {
+		max-width: 100%;
+	}
+
+	.about_title {
 		font-size: 2.5rem;
+	}
+
+	.text h4 {
+		font-size: 1.5rem;
+	}
+
+	.text p {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		padding: 120px 50px;
 	}
 }

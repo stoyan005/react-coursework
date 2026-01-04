@@ -1,3 +1,4 @@
+/* ! FAVOURITE PANEL */
 .panel {
 	position: fixed;
 	top: 20px;
@@ -31,6 +32,7 @@
 	margin-bottom: 1rem;
 }
 
+/* ! CLOSE BUTTON */
 .close_button {
 	background-color: transparent;
 	border: none;
@@ -65,6 +67,7 @@
 	gap: 1rem;
 }
 
+/* ! CLEAR ALL BUTTON */
 .clear_button {
 	background: #e73838;
 	color: #ffffff;

@@ -1,3 +1,4 @@
+/* ! CATEGORY SECTION */
 .categories_section {
 	display: flex;
 	flex-wrap: wrap;
@@ -35,6 +36,7 @@
 	font-weight: 500;
 }
 
+/* ! ANIMATIONS */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;

@@ -1,3 +1,4 @@
+/* ! PROPERTY CARD */
 .property_card {
 	display: flex;
 	flex-direction: column;
@@ -37,6 +38,7 @@
 	transform: scale(1.1);
 }
 
+/* ! PROPERTY CARD IMAGE */
 .image_overlay {
 	display: flex;
 	flex-direction: column;
@@ -69,6 +71,7 @@
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* ! FAVOURITE ICON */
 .heart_button {
 	display: flex;
 	align-items: center;
@@ -101,6 +104,7 @@
 	gap: 10px;
 }
 
+/* ! CARD BADGES, LEASEHOLD, DATE, ETC */
 .image_badge {
 	background: rgba(255, 255, 255, 0.9);
 	color: #333333;
@@ -161,6 +165,7 @@
 	justify-content: flex-start;
 }
 
+/* ! ICONS */
 .bed_icon {
 	font-size: 1.25rem;
 	color: #6c63ff;
@@ -181,6 +186,7 @@
 	gap: 10px;
 }
 
+/* ! BUTTONS */
 .view_button,
 .contact_button {
 	text-align: center;
@@ -200,4 +206,50 @@
 .contact_button:hover {
 	background-color: #000000;
 	color: #ffffff;
+}
+
+/* ! RESPONSIVENESS */
+@media (max-width: 900px) {
+	.view_button,
+	.contact_button {
+		width: 250px;
+		padding: 8px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.property_card {
+		border-radius: 10px;
+		flex: 1 1 100%;
+		margin-bottom: 20px;
+	}
+
+	.image_container {
+		height: 180px;
+	}
+
+	.image_title {
+		font-size: 1rem;
+	}
+
+	.image_badge {
+		font-size: 0.65rem;
+		padding: 3px 6px;
+	}
+
+	.description {
+		font-size: 0.8rem;
+		height: auto;
+		margin-bottom: 15px;
+	}
+
+	.card_details {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.card_details p {
+		font-size: 0.75rem;
+	}
 }

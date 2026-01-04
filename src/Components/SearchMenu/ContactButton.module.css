@@ -1,3 +1,4 @@
+/* ! CONTACT BUTTON */
 .contact_here {
 	margin-top: 10px;
 	width: 210px;
@@ -18,6 +19,7 @@
 	background: #ffffff;
 }
 
+/* ! ANIMATIONS */
 @keyframes buttonLoad {
 	from {
 		opacity: 0;

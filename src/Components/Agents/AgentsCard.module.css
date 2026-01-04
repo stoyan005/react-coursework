@@ -1,3 +1,4 @@
+/* ! AGENTS */
 .agents {
 	max-width: 1600px;
 	margin: 100px auto 50px;
@@ -87,6 +88,7 @@
 	color: #eeae5b;
 }
 
+/* ! RESPONSIVENESS */
 @media (max-width: 1200px) {
 	.agents_grid {
 		grid-template-columns: repeat(2, 1fr);
@@ -117,7 +119,6 @@
 	}
 }
 
-/* Mobile: ~600px and below */
 @media (max-width: 600px) {
 	.agent_card {
 		flex-direction: column;

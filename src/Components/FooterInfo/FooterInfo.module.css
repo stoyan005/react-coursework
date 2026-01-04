@@ -1,10 +1,10 @@
+/* ! FOOTER */
 .footer {
 	background: #1a1a1a;
 	color: #e5e7eb;
 	padding-top: 2rem;
 }
 
-/* Content */
 .main_content {
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 2fr;
@@ -24,6 +24,7 @@
 	color: #858585;
 }
 
+/* ! FOOTER LINKS AND ICONS */
 .footer_socials {
 	display: flex;
 	gap: 0.75rem;
@@ -84,6 +85,7 @@
 	color: #ffffff;
 }
 
+/* ! NEWSLETTER */
 .footer_newsletter p {
 	color: #858585;
 	margin-bottom: 1rem;
@@ -123,6 +125,7 @@
 	background: #ebb46d;
 }
 
+/* ! LINKS AT THE BOTTOM */
 .bottom_content {
 	display: flex;
 	justify-content: space-between;
@@ -145,7 +148,7 @@
 	color: #ffffff;
 }
 
-/* Responsive */
+/* ! RESPONSIVENESS */
 @media (max-width: 900px) {
 	.main_content {
 		grid-template-columns: 1fr;

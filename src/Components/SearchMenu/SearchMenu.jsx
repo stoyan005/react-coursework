@@ -25,7 +25,7 @@ const SearchMenu = () => {
 						convenience come together. Explore carefully curated properties
 						designed to suit your lifestyle and make your dream home a reality.
 					</h3>
-					<div className={styles.search_btn}>
+					<div className={styles.search_button}>
 						<a href="/buy">
 							<SearchButton title="Search Properties" />
 						</a>
