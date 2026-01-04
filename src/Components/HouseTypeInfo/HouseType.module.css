@@ -68,7 +68,7 @@
 	transform: scale(0.95);
 }
 
-/* RIGHT SIDE: DETAILS PANEL */
+/* ! RIGHT SIDE: DETAILS PANEL */
 .info_side {
 	flex: 0.8;
 	overflow-y: auto;
@@ -110,7 +110,7 @@
 	color: #1a1a1a;
 }
 
-/* STATS */
+/* ! STATISTICS */
 .stats_grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -179,7 +179,7 @@
 	color: #000;
 }
 
-/* TAB CONTENT */
+/* ! TABS CONTENT */
 .tab_content {
 	min-height: 200px;
 	line-height: 1.7;
@@ -203,7 +203,7 @@
 	border-radius: 12px;
 }
 
-/* ACTION BUTTONS */
+/* ! TABS BUTTONS */
 .action_bar {
 	margin-top: auto;
 	padding-top: 40px;
@@ -212,25 +212,41 @@
 	gap: 10px;
 }
 
-.btn_primary {
+.booking_button {
 	background: #1a1a1a;
 	color: #fff;
 	border: none;
-	padding: 20px;
-	border-radius: 12px;
+	padding: 15px;
+	border-radius: 10px;
 	font-weight: 700;
 	cursor: pointer;
+	border: 2px solid black;
+	transition: all 0.3s ease;
 }
 
-.btn_secondary {
-	background: #fff;
-	border: 1px solid #ddd;
+.brochure_button {
+	background: #ffffff;
+	border: 2px solid #dddddd;
 	padding: 15px;
-	border-radius: 12px;
+	border-radius: 10px;
+	font-weight: 700;
 	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
-/* LOADING */
+.booking_button:hover {
+	border: 2px solid black;
+	background: #ffffff;
+	color: #000000;
+}
+
+.brochure_button:hover {
+	background: #000000;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+
+/* ! LOADING TEXT */
 .loading_text {
 	padding: 40px;
 	text-align: center;
@@ -238,7 +254,7 @@
 	color: #666;
 }
 
-/* ANIMATIONS */
+/* ! ANIMATIONS */
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -250,7 +266,7 @@
 	}
 }
 
-/* RESPONSIVE */
+/* ! RESPONSIVE */
 @media (max-width: 1100px) {
 	.page_wrap {
 		flex-direction: column;

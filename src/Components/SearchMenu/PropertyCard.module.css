@@ -177,15 +177,16 @@
 }
 
 .button_container {
-	display: flex; /* Align children in a row */
-	gap: 10px; /* Space between buttons */
+	display: flex;
+	gap: 10px;
 }
 
 .view_button,
 .contact_button {
 	text-align: center;
-	background: #1a1a1a;
-	color: #ffffff;
+	background: transparent;
+	color: #000000;
+	border: 2px solid black;
 	padding: 10px;
 	margin-top: 10px;
 	font-weight: 600;
@@ -197,5 +198,6 @@
 
 .view_button:hover,
 .contact_button:hover {
-	background-color: #444444;
+	background-color: #000000;
+	color: #ffffff;
 }

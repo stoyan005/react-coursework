@@ -8,6 +8,10 @@ import {
 	FaExpand,
 	FaThList,
 	FaMap,
+	FaFireAlt,
+	FaTree,
+	FaWind,
+	FaBoxes,
 } from 'react-icons/fa';
 import styles from './HouseType.module.css';
 
@@ -15,11 +19,11 @@ const HouseType = ({ property }) => {
 	const [activeTab, setActiveTab] = useState('description');
 	const [activeImage, setActiveImage] = useState(0);
 
-	if (!property) return <div className={styles.loading_text}>Loading the good stuff...</div>;
+	if (!property) return <div className={styles.loading_text}>Loading the best stuff...</div>;
 
 	return (
 		<div className={styles.page_wrap}>
-			{/* LEFT SIDE: IMAGE GALLERY */}
+			{/* LEFT SIDE: BIG IMAGE GALLERY */}
 			<section className={styles.image_side}>
 				<div className={styles.big_image}>
 					<img src={property.images?.[activeImage]} alt="Property" />
@@ -56,13 +60,13 @@ const HouseType = ({ property }) => {
 					</div>
 				</header>
 
-				{/* STATS */}
+				{/* STATISTICS OF THE HOUSE */}
 				<div className={styles.stats_grid}>
 					<div className={styles.stat_card}>
 						<FaRulerCombined />
 						<div className={styles.stat_text}>
 							<span className={styles.stat_number}>{property.squareFeet}</span>
-							<span className={styles.stat_label}>sqft</span>
+							<span className={styles.stat_label}>Square Feet</span>
 						</div>
 					</div>
 
@@ -70,7 +74,7 @@ const HouseType = ({ property }) => {
 						<FaBed />
 						<div className={styles.stat_text}>
 							<span className={styles.stat_number}>{property.bedrooms}</span>
-							<span className={styles.stat_label}>beds</span>
+							<span className={styles.stat_label}>Bedrooms</span>
 						</div>
 					</div>
 
@@ -78,7 +82,7 @@ const HouseType = ({ property }) => {
 						<FaBath />
 						<div className={styles.stat_text}>
 							<span className={styles.stat_number}>{property.bathrooms}</span>
-							<span className={styles.stat_label}>baths</span>
+							<span className={styles.stat_label}>Bathrooms</span>
 						</div>
 					</div>
 
@@ -88,12 +92,52 @@ const HouseType = ({ property }) => {
 							<span className={styles.stat_number}>
 								{property.parking || 'N/A'}
 							</span>
-							<span className={styles.stat_label}>parking</span>
+							<span className={styles.stat_label}>Parking</span>
+						</div>
+					</div>
+
+					<div className={styles.stat_card}>
+						<FaFireAlt />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>
+								{property.heating || 'N/A'}
+							</span>
+							<span className={styles.stat_label}>Central Heating</span>
+						</div>
+					</div>
+
+					<div className={styles.stat_card}>
+						<FaTree />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>
+								{property.garden || 'N/A'}
+							</span>
+							<span className={styles.stat_label}>Garden</span>
+						</div>
+					</div>
+
+					<div className={styles.stat_card}>
+						<FaWind />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>
+								{property.aircon || 'N/A'}
+							</span>
+							<span className={styles.stat_label}>Air Conditioning</span>
+						</div>
+					</div>
+
+					<div className={styles.stat_card}>
+						<FaBoxes />
+						<div className={styles.stat_text}>
+							<span className={styles.stat_number}>
+								{property.storage || 'N/A'}
+							</span>
+							<span className={styles.stat_label}>Storage Unit</span>
 						</div>
 					</div>
 				</div>
 
-				{/* TABS */}
+				{/* TABS FOR DESCRIPTION, FLOORPLAN AND MAP */}
 				<div className={styles.tabs_wrap}>
 					<nav className={styles.tabs}>
 						<button
@@ -148,8 +192,8 @@ const HouseType = ({ property }) => {
 				</div>
 
 				<footer className={styles.action_bar}>
-					<button className={styles.btn_primary}>Book a Viewing</button>
-					<button className={styles.btn_secondary}>Get Brochure</button>
+					<button className={styles.booking_button}>Book a Viewing</button>
+					<button className={styles.brochure_button}>Get Brochure</button>
 				</footer>
 			</aside>
 		</div>
