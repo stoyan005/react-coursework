@@ -4,7 +4,7 @@ import styles from './AgentsCard.module.css';
 const AgentsCard = ({ agents = [] }) => {
 	return (
 		<div className={styles.agents}>
-			{/* Page Header */}
+			{/* AGENT PAGE HEADER */}
 			<div className={styles.agents_header}>
 				<h1>Meet Our Expert Real Estate Agents!</h1>
 				<p>
@@ -15,7 +15,7 @@ const AgentsCard = ({ agents = [] }) => {
 				</p>
 			</div>
 
-			{/* Agent Cards */}
+			{/* AGENT CARDS */}
 			<div className={styles.agents_grid}>
 				{agents.map((agent) => (
 					<div key={agent.id} className={styles.agent_card}>

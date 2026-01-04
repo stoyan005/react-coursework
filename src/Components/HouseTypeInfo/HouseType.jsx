@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+	/* Importing icons from react-icons for UI representation */
 	FaBed,
 	FaBath,
 	FaRulerCombined,
@@ -16,9 +17,14 @@ import {
 import styles from './HouseType.module.css';
 
 const HouseType = ({ property }) => {
+	/* State to manage which tab is currently active ('description', 'floorplan', 'map') */
 	const [activeTab, setActiveTab] = useState('description');
+	/* State to manage which image in the gallery is currently active */
 	const [activeImage, setActiveImage] = useState(0);
 
+	{
+		/*If the property data is not yet loaded, show a loading message */
+	}
 	if (!property) return <div className={styles.loading_text}>Loading the best stuff...</div>;
 
 	return (
@@ -32,6 +38,7 @@ const HouseType = ({ property }) => {
 					</div>
 				</div>
 
+				{/* MAIN THUMBNAIL FOR IMAGE SELECTION */}
 				<div className={styles.thumb_row}>
 					{property.images?.map((img, idx) => (
 						<div
@@ -60,7 +67,7 @@ const HouseType = ({ property }) => {
 					</div>
 				</header>
 
-				{/* STATISTICS OF THE HOUSE */}
+				{/* STATISTICS OF THE HOUSE INCLUDING ICONS, STATS, TEXT */}
 				<div className={styles.stats_grid}>
 					<div className={styles.stat_card}>
 						<FaRulerCombined />
@@ -137,7 +144,7 @@ const HouseType = ({ property }) => {
 					</div>
 				</div>
 
-				{/* TABS FOR DESCRIPTION, FLOORPLAN AND MAP */}
+				{/* ICON TABS FOR DESCRIPTION, FLOORPLAN AND MAP */}
 				<div className={styles.tabs_wrap}>
 					<nav className={styles.tabs}>
 						<button
@@ -162,6 +169,7 @@ const HouseType = ({ property }) => {
 						</button>
 					</nav>
 
+					{/* DESCRIPTION CONTENT */}
 					<div className={styles.tab_content}>
 						{activeTab === 'description' && (
 							<div
@@ -170,6 +178,7 @@ const HouseType = ({ property }) => {
 							/>
 						)}
 
+						{/* FLOORPLAN CONTENT */}
 						{activeTab === 'floorplan' && (
 							<div className={styles.fade}>
 								<img
@@ -180,6 +189,7 @@ const HouseType = ({ property }) => {
 							</div>
 						)}
 
+						{/* MAP CONTENT */}
 						{activeTab === 'map' && (
 							<iframe
 								src={property.mapUrl}

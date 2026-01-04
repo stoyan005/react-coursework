@@ -1,4 +1,6 @@
 import React from 'react';
+
+/* Importing images for each property category */
 import styles from './Categories.module.css';
 import house from '../../assets/photos/house.jpg';
 import flat from '../../assets/photos/flat.jpg';
@@ -8,6 +10,7 @@ import semi_detached from '../../assets/photos/semi_detached.jpg';
 import cottage from '../../assets/photos/cottage.jpg';
 import terraced from '../../assets/photos/terraced.jpg';
 
+/* Array of property categories, each with a label and corresponding image */
 const categories = [
 	{ label: 'House', img: house },
 	{ label: 'Flat', img: flat },
@@ -20,6 +23,7 @@ const categories = [
 
 const Categories = () => {
 	return (
+		/* Main container for all category cards */
 		<div className={styles.categories_section}>
 			{categories.map((item, index) => (
 				<div
