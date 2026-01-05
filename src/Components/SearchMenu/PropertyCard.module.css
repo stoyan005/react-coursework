@@ -187,8 +187,7 @@
 }
 
 /* ! BUTTONS */
-.view_button,
-.contact_button {
+.view_button {
 	text-align: center;
 	background: transparent;
 	color: #000000;
@@ -199,19 +198,16 @@
 	border-radius: 10px;
 	text-decoration: none;
 	transition: background 0.3s ease;
-	width: 300px;
 }
 
-.view_button:hover,
-.contact_button:hover {
+.view_button:hover {
 	background-color: #000000;
 	color: #ffffff;
 }
 
 /* ! RESPONSIVENESS */
 @media (max-width: 900px) {
-	.view_button,
-	.contact_button {
+	.view_button {
 		width: 250px;
 		padding: 8px;
 		font-size: 0.9rem;

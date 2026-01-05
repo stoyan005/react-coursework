@@ -202,7 +202,9 @@ const HouseType = ({ property }) => {
 				</div>
 
 				<footer className={styles.action_bar}>
-					<button className={styles.booking_button}>Book a Viewing</button>
+					<a href="/contacts" className={styles.booking_button}>
+						Book a Viewing
+					</a>
 					<button className={styles.brochure_button}>Get Brochure</button>
 				</footer>
 			</aside>
